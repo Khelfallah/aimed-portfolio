@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Navigation } from '../navigation';
+
+/* oxlint-disable next/no-html-link-for-pages */
 
 export const metadata: Metadata = {
   title: 'Aimed — About',
@@ -135,13 +136,13 @@ export default function AimedPage() {
             <h2>Working across disciplines</h2>
             <p>Brand, product &amp; experience</p>
           </div>
-          <Link
+          <a
             className="round-link"
             href="/#selected-work"
             aria-label="View selected work"
           >
             ↗
-          </Link>
+          </a>
         </article>
       </section>
     </main>

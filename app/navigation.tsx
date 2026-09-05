@@ -1,4 +1,5 @@
-import Link from 'next/link';
+// Native links intentionally force full navigation in the hosted build.
+/* oxlint-disable next/no-html-link-for-pages */
 
 const greetings = [
   { text: 'Hello 👋', lang: 'en' },
@@ -16,7 +17,7 @@ type NavigationProps = {
 export function Navigation({ active }: NavigationProps) {
   return (
     <nav className="nav-pill" aria-label="Primary navigation">
-      <Link
+      <a
         className={`nav-greeting${active === 'home' ? ' is-active' : ''}`}
         href="/"
         aria-label="Hello in multiple languages, home"
@@ -29,18 +30,18 @@ export function Navigation({ active }: NavigationProps) {
             </span>
           ))}
         </span>
-      </Link>
-      <Link
+      </a>
+      <a
         className={`nav-name${active === 'aimed' ? ' is-active' : ''}`}
         href="/aimed"
         aria-current={active === 'aimed' ? 'page' : undefined}
       >
         Aimed
-      </Link>
-      <Link className="nav-work" href="/#selected-work">
+      </a>
+      <a className="nav-work" href="/#selected-work">
         Work
         <span className="notification-dot" aria-hidden="true" />
-      </Link>
+      </a>
       <a
         className="nav-linkedin"
         href="https://www.linkedin.com"
@@ -49,9 +50,9 @@ export function Navigation({ active }: NavigationProps) {
       >
         LinkedIn
       </a>
-      <Link className="nav-contact" href="/#contact">
+      <a className="nav-contact" href="/#contact">
         Get in touch
-      </Link>
+      </a>
     </nav>
   );
 }

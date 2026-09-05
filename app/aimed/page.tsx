@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import { Mail, MessageCircle, Phone, Video } from 'lucide-react';
 import { Navigation } from '../navigation';
 
 /* oxlint-disable next/no-html-link-for-pages */
@@ -93,42 +94,47 @@ export default function AimedPage() {
         </article>
 
         <div className="about-widgets">
-          <article className="spotify-panel">
-            <iframe
-              title="Aimed's Spotify playlist"
-              src="https://open.spotify.com/embed/playlist/1gMwLnEXldpBcQcgfm2DSR?utm_source=generator&si=c17240e0cd5f45f8"
-              width="100%"
-              height="352"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
+          <article className="contact-card" aria-labelledby="contact-card-name">
+            <Image
+              className="contact-card-avatar"
+              src="/hero-portrait.png"
+              alt="Portrait of Aimed Eddine Khelfallah"
+              width={320}
+              height={320}
+              sizes="(max-width: 700px) 160px, 220px"
             />
-          </article>
-
-          <article className="about-panel profile-panel">
-            <header className="profile-header">
-              <Image
-                className="profile-avatar"
-                src="/hero-portrait.png"
-                alt="Portrait of Aimed"
-                width={88}
-                height={88}
-                sizes="88px"
-              />
-              <div>
-                <h2>Aimed</h2>
-                <p>Creative Director · Designer</p>
-              </div>
-              <span className="profile-mark" aria-hidden="true">
-                AK
-              </span>
-            </header>
-            <p className="profile-note">
-              Designing brands, digital products and experiences from Algeria.
-            </p>
-            <a className="panel-action" href="mailto:hello@aimed.design">
-              Email me <span aria-hidden="true">↗</span>
-            </a>
+            <h2 id="contact-card-name">Aimed Eddine Khelfallah</h2>
+            <div className="contact-card-actions" aria-label="Contact options">
+              <a
+                href="mailto:hello@aimed.design?subject=Hello%20Aimed"
+                aria-label="Send Aimed a message"
+                title="Message"
+              >
+                <MessageCircle aria-hidden="true" />
+              </a>
+              <a
+                href="mailto:hello@aimed.design?subject=Call%20request"
+                aria-label="Request a phone call with Aimed"
+                title="Request a call"
+              >
+                <Phone aria-hidden="true" />
+              </a>
+              <a
+                className="video-call-link"
+                href="mailto:hello@aimed.design?subject=Video%20call%20request"
+                aria-label="Request a video call with Aimed"
+                title="Request a video call"
+              >
+                <Video aria-hidden="true" />
+              </a>
+              <a
+                href="mailto:hello@aimed.design"
+                aria-label="Email Aimed"
+                title="Email"
+              >
+                <Mail aria-hidden="true" />
+              </a>
+            </div>
           </article>
 
           <article className="about-panel inspiration-panel">

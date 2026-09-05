@@ -293,28 +293,6 @@ a:focus-visible {
   line-height: 1.47;
 }
 
-.profile-panel {
-  display: flex;
-  padding: clamp(1.5rem, 2vw, 2rem);
-  flex-direction: column;
-}
-
-.profile-header {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 0.9rem;
-  align-items: center;
-}
-
-.profile-avatar {
-  width: clamp(3.5rem, 4.2vw, 4.8rem);
-  height: clamp(3.5rem, 4.2vw, 4.8rem);
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: 50% 43%;
-}
-
-.profile-header h2,
 .practice-copy h2 {
   margin: 0;
   font-size: clamp(1.05rem, 1.25vw, 1.35rem);
@@ -322,7 +300,6 @@ a:focus-visible {
   letter-spacing: -0.04em;
 }
 
-.profile-header p,
 .practice-copy p {
   margin: 0.2rem 0 0;
   color: #777e88;
@@ -330,63 +307,78 @@ a:focus-visible {
   letter-spacing: -0.02em;
 }
 
-.profile-mark {
+.contact-card {
+  display: flex;
+  min-width: 0;
+  padding: clamp(2rem, 3.2vw, 3.75rem);
+  align-items: center;
+  aspect-ratio: 16 / 10;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: clamp(1.75rem, 2.35vw, 2.75rem);
+  background: #594025;
+  box-shadow: 0 24px 50px rgba(60, 42, 23, 0.18);
+  color: white;
+}
+
+.contact-card-avatar {
+  width: clamp(9.5rem, 13vw, 13.5rem);
+  height: clamp(9.5rem, 13vw, 13.5rem);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  background: #c89452;
+  object-fit: cover;
+  object-position: 50% 43%;
+}
+
+.contact-card > h2 {
+  margin: clamp(1.35rem, 2.3vw, 2.25rem) 0 0;
+  font-size: clamp(1.85rem, 2.65vw, 3.25rem);
+  font-weight: 570;
+  letter-spacing: -0.055em;
+  line-height: 1;
+  text-align: center;
+}
+
+.contact-card-actions {
+  display: flex;
+  margin-top: clamp(1.5rem, 2.4vw, 2.35rem);
+  gap: clamp(0.7rem, 1.2vw, 1.15rem);
+}
+
+.contact-card-actions a {
   display: grid;
-  width: clamp(3.25rem, 4.1vw, 4.6rem);
+  width: clamp(3.7rem, 5vw, 4.8rem);
   aspect-ratio: 1;
   place-items: center;
-  border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.88);
-  box-shadow: 0 12px 24px rgba(20, 29, 40, 0.09);
-  font-weight: 650;
-  letter-spacing: -0.05em;
+  border: 1px solid rgba(255, 255, 255, 0.52);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+  color: white;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
 }
 
-.profile-note {
-  margin: clamp(1.75rem, 2.8vw, 3rem) 0 1.5rem;
-  font-size: clamp(1.25rem, 1.55vw, 1.72rem);
-  letter-spacing: -0.045em;
-  line-height: 1.28;
+.contact-card-actions a:hover,
+.contact-card-actions a:focus-visible,
+.contact-card-actions .video-call-link {
+  background: white;
+  color: #594025;
 }
 
-.panel-action {
-  display: flex;
-  min-height: 4rem;
-  margin-top: auto;
-  align-items: center;
-  justify-content: center;
-  gap: 0.65rem;
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.6);
-  box-shadow: 0 12px 28px rgba(33, 44, 58, 0.06);
-  font-size: 1rem;
-  font-weight: 600;
-  transition: background-color 200ms ease;
-}
-
-.panel-action:hover,
-.panel-action:focus-visible {
-  background: rgba(255, 255, 255, 0.92);
+.contact-card-actions svg {
+  width: 43%;
+  height: 43%;
+  stroke-width: 2.3;
 }
 
 .practice-image img {
   object-fit: cover;
-}
-
-.spotify-panel,
-.spotify-panel iframe {
-  display: block;
-  width: 100%;
-  height: 352px;
-  overflow: hidden;
-  border: 0;
-  border-radius: 12px;
-}
-
-.spotify-panel {
-  grid-column: 1 / -1;
-  grid-row: 1;
 }
 
 .inspiration-panel {
@@ -437,7 +429,7 @@ a:focus-visible {
   display: grid;
   min-height: 24rem;
   padding: clamp(1.5rem, 2vw, 2rem);
-  grid-column: 2;
+  grid-column: 1 / -1;
   grid-row: 2;
   grid-template-columns: 1fr auto;
   grid-template-rows: 1fr auto;
@@ -473,12 +465,6 @@ a:focus-visible {
 .round-link:hover,
 .round-link:focus-visible {
   background: white;
-}
-
-.profile-panel {
-  min-height: 24rem;
-  grid-column: 1;
-  grid-row: 2;
 }
 
 @media (max-width: 1100px) {
@@ -760,8 +746,7 @@ a:focus-visible {
     gap: 0.65rem;
   }
 
-  .spotify-panel,
-  .profile-panel,
+  .contact-card,
   .inspiration-panel,
   .practice-panel {
     grid-column: auto;
@@ -781,9 +766,29 @@ a:focus-visible {
     font-size: 1rem;
   }
 
-  .profile-panel {
-    min-height: 25rem;
-    padding: 1.4rem;
+  .contact-card {
+    min-height: 31rem;
+    padding: 2rem 1.25rem;
+    aspect-ratio: auto;
+  }
+
+  .contact-card-avatar {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .contact-card > h2 {
+    max-width: 14ch;
+    font-size: 2rem;
+    line-height: 1.05;
+  }
+
+  .contact-card-actions {
+    gap: 0.65rem;
+  }
+
+  .contact-card-actions a {
+    width: 3.65rem;
   }
 
   .inspiration-panel,

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { Mail, MessageCircle, Phone, Video } from 'lucide-react';
 import { Navigation } from '../navigation';
 
 /* oxlint-disable next/no-html-link-for-pages */
@@ -110,14 +109,18 @@ export default function AimedPage() {
                 aria-label="Send Aimed a message"
                 title="Message"
               >
-                <MessageCircle aria-hidden="true" />
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M12 3C6.48 3 2 6.58 2 11c0 2.08 1 3.97 2.64 5.39L3.5 21l5.04-2.12c1.08.35 2.24.54 3.46.54 5.52 0 10-3.58 10-8.42S17.52 3 12 3Z" />
+                </svg>
               </a>
               <a
                 href="mailto:hello@aimed.design?subject=Call%20request"
                 aria-label="Request a phone call with Aimed"
                 title="Request a call"
               >
-                <Phone aria-hidden="true" />
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M6.62 10.79a15.46 15.46 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2Z" />
+                </svg>
               </a>
               <a
                 className="video-call-link"
@@ -125,14 +128,18 @@ export default function AimedPage() {
                 aria-label="Request a video call with Aimed"
                 title="Request a video call"
               >
-                <Video aria-hidden="true" />
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M3 6.75A2.75 2.75 0 0 1 5.75 4h8.5A2.75 2.75 0 0 1 17 6.75v10.5A2.75 2.75 0 0 1 14.25 20h-8.5A2.75 2.75 0 0 1 3 17.25V6.75Zm15.5 3.08 3.05-2.18A.92.92 0 0 1 23 8.4v7.2a.92.92 0 0 1-1.45.75l-3.05-2.18V9.83Z" />
+                </svg>
               </a>
               <a
                 href="mailto:hello@aimed.design"
                 aria-label="Email Aimed"
                 title="Email"
               >
-                <Mail aria-hidden="true" />
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M3.8 5h16.4A1.8 1.8 0 0 1 22 6.8v.43l-10 6.25L2 7.23V6.8A1.8 1.8 0 0 1 3.8 5Zm-1.8 4.58 6.82 4.26L2.06 19.4A1.8 1.8 0 0 1 2 18.95V9.58Zm20 0v9.37c0 .16-.02.31-.06.45l-6.76-5.56L22 9.58ZM10.45 14.86l1.55.97 1.55-.97 6.37 5.24c-.24.18-.54.29-.87.29H4.95c-.33 0-.63-.11-.87-.29l6.37-5.24Z" />
+                </svg>
               </a>
             </div>
           </article>

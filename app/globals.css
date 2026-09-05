@@ -308,18 +308,19 @@ a:focus-visible {
 }
 
 .contact-card {
+  container-type: inline-size;
   display: flex;
   min-width: 0;
-  padding: clamp(1.5rem, 1.85vw, 2rem);
+  padding: 8% 9.2% 7.5%;
   align-items: center;
   aspect-ratio: 1;
   grid-column: 1;
   grid-row: 1;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   overflow: hidden;
   border: 1px solid #e7e8ea;
-  border-radius: clamp(1.75rem, 2.35vw, 2.75rem);
+  border-radius: 13%;
   background: var(--paper);
   box-shadow:
     0 22px 55px rgba(43, 55, 70, 0.07),
@@ -328,7 +329,7 @@ a:focus-visible {
 }
 
 .contact-card-avatar {
-  width: clamp(8.75rem, 45%, 11.5rem);
+  width: 56.37%;
   height: auto;
   aspect-ratio: 1;
   border: 1px solid rgba(18, 24, 31, 0.08);
@@ -339,25 +340,27 @@ a:focus-visible {
 }
 
 .contact-card > h2 {
-  margin: clamp(1.1rem, 1.4vw, 1.5rem) 0 0;
-  font-size: clamp(1.45rem, 1.75vw, 2rem);
+  margin: 7.84% 0 0;
+  font-size: 7.84cqi;
   font-weight: 610;
   letter-spacing: -0.055em;
-  line-height: 1;
+  line-height: 0.98;
   text-align: center;
+  white-space: nowrap;
 }
 
 .contact-card-actions {
   display: flex;
-  width: min(100%, 24rem);
-  margin-top: clamp(1.2rem, 1.55vw, 1.65rem);
+  width: 100%;
+  margin-top: 7.97%;
   justify-content: space-between;
-  gap: clamp(0.45rem, 0.65vw, 0.7rem);
+  gap: 5.02%;
 }
 
 .contact-card-actions a {
   display: grid;
-  width: clamp(3rem, 18%, 4.5rem);
+  width: 21.08%;
+  flex: 0 0 21.08%;
   aspect-ratio: 1;
   place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.96);
@@ -385,7 +388,7 @@ a:focus-visible {
 .contact-card-actions svg {
   width: 43%;
   height: 43%;
-  stroke-width: 2.3;
+  fill: currentColor;
 }
 
 .practice-image img {
@@ -782,21 +785,7 @@ a:focus-visible {
   }
 
   .contact-card {
-    padding: 1.35rem 1rem;
-  }
-
-  .contact-card-avatar {
-    width: clamp(8rem, 42vw, 10rem);
-  }
-
-  .contact-card > h2 {
-    max-width: 14ch;
-    font-size: clamp(1.45rem, 7vw, 1.85rem);
-    line-height: 1.05;
-  }
-
-  .contact-card-actions {
-    gap: 0.65rem;
+    padding: 8% 9.2% 7.5%;
   }
 
   .practice-panel {

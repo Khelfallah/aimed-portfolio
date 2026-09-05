@@ -441,9 +441,38 @@ a:focus-visible {
   grid-row: 2;
 }
 
-.inspiration-panel > img {
-  z-index: -1;
+.image-widget-button {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: #d9dcde;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.image-widget-button:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: -6px;
+}
+
+.image-widget-photo {
   object-fit: cover;
+  animation: image-widget-reveal 360ms ease both;
+}
+
+@keyframes image-widget-reveal {
+  from {
+    opacity: 0.58;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .image-caption {
@@ -459,6 +488,7 @@ a:focus-visible {
   background: rgba(16, 18, 20, 0.62);
   color: white;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+  pointer-events: none;
 }
 
 .image-caption > span {

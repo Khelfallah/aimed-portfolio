@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { Navigation } from '../navigation';
+import { ImageWidget } from './image-widget';
 
 /* oxlint-disable next/no-html-link-for-pages */
 
@@ -144,21 +145,7 @@ export default function AimedPage() {
             </div>
           </article>
 
-          <article className="about-panel inspiration-panel">
-            <Image
-              src="/work/project-03.png"
-              alt="Monochrome art-directed scene exploring material, light and form"
-              fill
-              sizes="(max-width: 760px) 100vw, 32vw"
-            />
-            <div className="image-caption">
-              <span aria-hidden="true">⌖</span>
-              <p>
-                <strong>Materials, form &amp; light</strong>
-                Visual references
-              </p>
-            </div>
-          </article>
+          <ImageWidget />
 
           <article className="about-panel practice-panel">
             <div className="practice-image">

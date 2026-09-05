@@ -109,6 +109,19 @@ a:focus-visible {
   font-weight: 650;
 }
 
+.nav-work {
+  gap: 0.45rem;
+}
+
+.notification-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  flex: none;
+  transform: translateY(-0.42em);
+  border-radius: 9999px;
+  background: #ff3b30;
+}
+
 .hero-copy {
   position: relative;
   z-index: 2;
@@ -299,8 +312,7 @@ a:focus-visible {
     padding: 0 0.9rem;
   }
 
-  .nav-optional,
-  .nav-pill a:nth-of-type(4) {
+  .nav-pill a:nth-of-type(3) {
     display: none;
   }
 

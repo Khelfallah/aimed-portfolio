@@ -52,10 +52,10 @@ export default function Home() {
           >
             {portfolio.name}
           </a>
-          <a className="nav-optional" href="#selected-work">
-            Highlights
+          <a className="nav-work" href="#selected-work">
+            Work
+            <span className="notification-dot" aria-hidden="true" />
           </a>
-          <a href="#selected-work">Work</a>
           <a href={portfolio.linkedin} target="_blank" rel="noreferrer">
             LinkedIn
           </a>

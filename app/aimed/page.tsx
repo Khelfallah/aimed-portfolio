@@ -92,99 +92,85 @@ export default function AimedPage() {
           </div>
         </article>
 
-        <article className="about-panel profile-panel">
-          <header className="profile-header">
-            <Image
-              className="profile-avatar"
-              src="/hero-portrait.png"
-              alt="Portrait of Aimed"
-              width={88}
-              height={88}
-              sizes="88px"
-            />
-            <div>
-              <h2>Aimed</h2>
-              <p>Creative Director · Designer</p>
-            </div>
-            <span className="profile-mark" aria-hidden="true">
-              AK
-            </span>
-          </header>
-          <p className="profile-note">
-            Designing brands, digital products and experiences from Algeria.
-          </p>
-          <a className="panel-action" href="mailto:hello@aimed.design">
-            Email me <span aria-hidden="true">↗</span>
-          </a>
-        </article>
-
-        <article className="about-panel soundtrack-panel">
-          <div className="soundtrack-top">
-            <div className="album-art">
+        <div className="about-column">
+          <article className="about-panel profile-panel">
+            <header className="profile-header">
               <Image
-                src="/work/project-02.png"
-                alt="Red, black and cream graphic design composition"
+                className="profile-avatar"
+                src="/hero-portrait.png"
+                alt="Portrait of Aimed"
+                width={88}
+                height={88}
+                sizes="88px"
+              />
+              <div>
+                <h2>Aimed</h2>
+                <p>Creative Director · Designer</p>
+              </div>
+              <span className="profile-mark" aria-hidden="true">
+                AK
+              </span>
+            </header>
+            <p className="profile-note">
+              Designing brands, digital products and experiences from Algeria.
+            </p>
+            <a className="panel-action" href="mailto:hello@aimed.design">
+              Email me <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <article className="about-panel inspiration-panel">
+            <Image
+              src="/work/project-03.png"
+              alt="Monochrome art-directed scene exploring material, light and form"
+              fill
+              sizes="(max-width: 760px) 100vw, 32vw"
+            />
+            <div className="image-caption">
+              <span aria-hidden="true">⌖</span>
+              <p>
+                <strong>Materials, form &amp; light</strong>
+                Visual references
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div className="about-column">
+          <article className="spotify-panel">
+            <iframe
+              title="Aimed's Spotify playlist"
+              src="https://open.spotify.com/embed/playlist/1gMwLnEXldpBcQcgfm2DSR?utm_source=generator&si=c17240e0cd5f45f8"
+              width="100%"
+              height="352"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+            />
+          </article>
+
+          <article className="about-panel practice-panel">
+            <div className="practice-image">
+              <Image
+                src="/work/edriso.png"
+                alt="Blue product design composition"
                 fill
                 sizes="180px"
               />
             </div>
-            <span className="music-mark" aria-hidden="true">
-              ♪
-            </span>
-          </div>
-          <div className="soundtrack-copy">
-            <h2>Ideas on repeat</h2>
-            <p>Studio mix — Volume 01</p>
-          </div>
-          <div className="track-line" aria-hidden="true">
-            <span />
-          </div>
-          <div className="track-controls" aria-hidden="true">
-            <span>↝</span>
-            <span>◀</span>
-            <span className="play-control">▶</span>
-            <span>▶</span>
-            <span>◖</span>
-          </div>
-        </article>
-
-        <article className="about-panel inspiration-panel">
-          <Image
-            src="/work/project-03.png"
-            alt="Monochrome art-directed scene exploring material, light and form"
-            fill
-            sizes="(max-width: 760px) 100vw, 32vw"
-          />
-          <div className="image-caption">
-            <span aria-hidden="true">⌖</span>
-            <p>
-              <strong>Materials, form &amp; light</strong>
-              Visual references
-            </p>
-          </div>
-        </article>
-
-        <article className="about-panel practice-panel">
-          <div className="practice-image">
-            <Image
-              src="/work/edriso.png"
-              alt="Blue product design composition"
-              fill
-              sizes="180px"
-            />
-          </div>
-          <div className="practice-copy">
-            <h2>Working across disciplines</h2>
-            <p>Brand, product &amp; experience</p>
-          </div>
-          <a
-            className="round-link"
-            href="/#selected-work"
-            aria-label="View selected work"
-          >
-            ↗
-          </a>
-        </article>
+            <div className="practice-copy">
+              <h2>Working across disciplines</h2>
+              <p>Brand, product &amp; experience</p>
+            </div>
+            <a
+              className="round-link"
+              href="/#selected-work"
+              aria-label="View selected work"
+            >
+              ↗
+            </a>
+          </article>
+        </div>
       </section>
     </main>
   );

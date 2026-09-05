@@ -64,7 +64,7 @@ a:focus-visible {
   letter-spacing: -0.025em;
 }
 
-.nav-pill a {
+.nav-pill :is(a, button) {
   position: relative;
   display: flex;
   min-height: clamp(3.25rem, 4vw, 4rem);
@@ -72,11 +72,19 @@ a:focus-visible {
   align-items: center;
   justify-content: center;
   padding: 0 clamp(0.8rem, 1.35vw, 1.55rem);
+  border: 0;
   border-radius: 9999px;
   background-color: transparent;
+  color: inherit;
   cursor: pointer;
+  font: inherit;
+  letter-spacing: inherit;
   white-space: nowrap;
   transition: background-color 220ms ease;
+}
+
+.nav-pill button:disabled {
+  cursor: default;
 }
 
 .contact-links a::after {
@@ -369,7 +377,7 @@ a:focus-visible {
     font-size: 0.95rem;
   }
 
-  .nav-pill a {
+  .nav-pill :is(a, button) {
     min-height: 3.25rem;
     padding: 0 0.5rem;
   }
@@ -441,7 +449,7 @@ a:focus-visible {
     font-size: 0.82rem;
   }
 
-  .nav-pill a {
+  .nav-pill :is(a, button) {
     padding: 0 0.25rem;
   }
 

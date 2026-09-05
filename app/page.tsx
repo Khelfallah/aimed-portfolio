@@ -1,4 +1,5 @@
 import Image, { type StaticImageData } from 'next/image';
+import Link from 'next/link';
 
 const portfolio = {
   name: 'Aimed',
@@ -44,10 +45,11 @@ export default function Home() {
     <main>
       <section className="hero" aria-labelledby="hero-title">
         <nav className="nav-pill" aria-label="Primary navigation">
-          <a
-            className="nav-greeting"
-            href="#top"
-            aria-label="Hello in multiple languages, back to top"
+          <Link
+            className="nav-greeting is-active"
+            href="/"
+            aria-label="Hello in multiple languages, home"
+            aria-current="page"
           >
             <span className="greeting-window" aria-hidden="true">
               <span lang="en">Hello 👋</span>
@@ -59,15 +61,16 @@ export default function Home() {
               <span lang="es">Hola 👋</span>
               <span lang="kab">Azul 👋</span>
             </span>
-          </a>
-          <a
-            className="nav-name is-active"
-            href="#top"
-            aria-label="Aimed, back to top"
-            aria-current="page"
+          </Link>
+          <button
+            className="nav-name"
+            type="button"
+            disabled
+            title="Aimed page coming later"
+            aria-label="Aimed page coming later"
           >
             {portfolio.name}
-          </a>
+          </button>
           <a className="nav-work" href="#selected-work">
             Work
             <span className="notification-dot" aria-hidden="true" />

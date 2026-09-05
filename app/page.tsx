@@ -45,6 +45,22 @@ export default function Home() {
       <section className="hero" aria-labelledby="hero-title">
         <nav className="nav-pill" aria-label="Primary navigation">
           <a
+            className="nav-greeting"
+            href="#top"
+            aria-label="Hello in multiple languages, back to top"
+          >
+            <span className="greeting-window" aria-hidden="true">
+              <span lang="en">Hello 👋</span>
+              <span lang="ar" dir="rtl">
+                مرحباً 👋
+              </span>
+              <span lang="fr">Bonjour 👋</span>
+              <span lang="de">Hallo 👋</span>
+              <span lang="es">Hola 👋</span>
+              <span lang="kab">Azul 👋</span>
+            </span>
+          </a>
+          <a
             className="nav-name is-active"
             href="#top"
             aria-label="Aimed, back to top"
@@ -56,7 +72,12 @@ export default function Home() {
             Work
             <span className="notification-dot" aria-hidden="true" />
           </a>
-          <a href={portfolio.linkedin} target="_blank" rel="noreferrer">
+          <a
+            className="nav-linkedin"
+            href={portfolio.linkedin}
+            target="_blank"
+            rel="noreferrer"
+          >
             LinkedIn
           </a>
           <a className="nav-contact" href="#contact">

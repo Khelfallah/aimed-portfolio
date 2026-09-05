@@ -71,7 +71,7 @@ a:focus-visible {
   flex: 1 1 auto;
   align-items: center;
   justify-content: center;
-  padding: 0 clamp(1.2rem, 2vw, 2.45rem);
+  padding: 0 clamp(0.8rem, 1.35vw, 1.55rem);
   border-radius: 9999px;
   background-color: transparent;
   cursor: pointer;
@@ -107,6 +107,68 @@ a:focus-visible {
 
 .nav-name {
   font-weight: 650;
+}
+
+.greeting-window {
+  position: relative;
+  display: block;
+  width: 6.5rem;
+  height: 1.25em;
+  overflow: hidden;
+}
+
+.greeting-window > span {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(55%);
+  animation: greeting-cycle 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.greeting-window > span:nth-child(1) {
+  animation-delay: -0.4s;
+}
+
+.greeting-window > span:nth-child(2) {
+  animation-delay: 1.6s;
+}
+
+.greeting-window > span:nth-child(3) {
+  animation-delay: 3.6s;
+}
+
+.greeting-window > span:nth-child(4) {
+  animation-delay: 5.6s;
+}
+
+.greeting-window > span:nth-child(5) {
+  animation-delay: 7.6s;
+}
+
+.greeting-window > span:nth-child(6) {
+  animation-delay: 9.6s;
+}
+
+@keyframes greeting-cycle {
+  0% {
+    opacity: 0;
+    transform: translateY(55%);
+  }
+
+  3.333%,
+  16.667% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  20%,
+  100% {
+    opacity: 0;
+    transform: translateY(-55%);
+  }
 }
 
 .nav-work {
@@ -309,11 +371,15 @@ a:focus-visible {
 
   .nav-pill a {
     min-height: 3.25rem;
-    padding: 0 0.9rem;
+    padding: 0 0.5rem;
   }
 
-  .nav-pill a:nth-of-type(3) {
+  .nav-linkedin {
     display: none;
+  }
+
+  .greeting-window {
+    width: 5.75rem;
   }
 
   .nav-contact {
@@ -370,6 +436,20 @@ a:focus-visible {
   }
 }
 
+@media (max-width: 380px) {
+  .nav-pill {
+    font-size: 0.82rem;
+  }
+
+  .nav-pill a {
+    padding: 0 0.25rem;
+  }
+
+  .greeting-window {
+    width: 5rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -381,5 +461,15 @@ a:focus-visible {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+
+  .greeting-window > span {
+    opacity: 0;
+    transform: none;
+    animation: none !important;
+  }
+
+  .greeting-window > span:first-child {
+    opacity: 1;
   }
 }

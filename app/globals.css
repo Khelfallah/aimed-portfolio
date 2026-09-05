@@ -319,12 +319,14 @@ a:focus-visible {
   flex-direction: column;
   justify-content: flex-start;
   overflow: hidden;
-  border: 1px solid #e7e8ea;
-  border-radius: 13%;
-  background: var(--paper);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: clamp(1.75rem, 2.4vw, 2rem);
+  background: rgba(245, 245, 245, 0.62);
   box-shadow:
-    0 22px 55px rgba(43, 55, 70, 0.07),
-    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    0 8px 24px rgba(43, 55, 70, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.68);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  backdrop-filter: blur(24px) saturate(160%);
   color: var(--ink);
 }
 
@@ -366,59 +368,28 @@ a:focus-visible {
   aspect-ratio: 1;
   place-items: center;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.52);
   border-radius: 50%;
-  background: rgba(218, 222, 227, 0.56);
+  background: rgba(245, 245, 245, 0.78);
   box-shadow:
-    0 0 0 0.5px rgba(19, 25, 33, 0.13),
-    0 3px 7px rgba(31, 38, 47, 0.11),
-    0 14px 28px rgba(31, 38, 47, 0.08),
-    inset 0 1.5px 1px rgba(255, 255, 255, 0.98),
-    inset 0 -1.5px 2px rgba(36, 43, 52, 0.14);
-  -webkit-backdrop-filter: blur(24px) saturate(165%);
-  backdrop-filter: blur(24px) saturate(165%);
+    0 4px 12px rgba(31, 38, 47, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.76),
+    inset 0 -1px 0 rgba(36, 43, 52, 0.07);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  backdrop-filter: blur(24px) saturate(160%);
   color: var(--ink);
   transition:
     background-color 200ms ease,
     box-shadow 200ms ease;
 }
 
-.contact-card-actions a::before {
-  position: absolute;
-  z-index: 0;
-  inset: 1px;
-  border-radius: inherit;
-  background: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.78) 0%,
-    rgba(255, 255, 255, 0.24) 38%,
-    rgba(255, 255, 255, 0.04) 61%,
-    rgba(117, 124, 133, 0.1) 100%
-  );
-  content: '';
-  pointer-events: none;
-}
-
-.contact-card-actions a::after {
-  position: absolute;
-  z-index: 0;
-  inset: 5%;
-  border-top: 1px solid rgba(255, 255, 255, 0.82);
-  border-radius: inherit;
-  content: '';
-  opacity: 0.9;
-  pointer-events: none;
-}
-
 .contact-card-actions a:hover,
 .contact-card-actions a:focus-visible {
-  background: rgba(230, 233, 237, 0.78);
+  background: rgba(250, 250, 250, 0.9);
   box-shadow:
-    0 0 0 0.5px rgba(19, 25, 33, 0.16),
-    0 4px 9px rgba(31, 38, 47, 0.13),
-    0 16px 30px rgba(31, 38, 47, 0.1),
-    inset 0 1.5px 1px rgba(255, 255, 255, 1),
-    inset 0 -1.5px 2px rgba(36, 43, 52, 0.16);
+    0 5px 14px rgba(31, 38, 47, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.88),
+    inset 0 -1px 0 rgba(36, 43, 52, 0.08);
 }
 
 .contact-card-actions svg {

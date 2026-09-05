@@ -310,7 +310,7 @@ a:focus-visible {
 .contact-card {
   display: flex;
   min-width: 0;
-  padding: clamp(1.35rem, 2vw, 2.25rem);
+  padding: clamp(1.5rem, 1.85vw, 2rem);
   align-items: center;
   aspect-ratio: 1;
   grid-column: 1;
@@ -318,18 +318,19 @@ a:focus-visible {
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.92);
+  border: 1px solid #e7e8ea;
   border-radius: clamp(1.75rem, 2.35vw, 2.75rem);
-  background: rgba(255, 255, 255, 0.62);
+  background: var(--paper);
   box-shadow:
-    0 22px 55px rgba(43, 55, 70, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 22px 55px rgba(43, 55, 70, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
   color: var(--ink);
 }
 
 .contact-card-avatar {
-  width: clamp(7.5rem, 9vw, 9.5rem);
-  height: clamp(7.5rem, 9vw, 9.5rem);
+  width: clamp(8.75rem, 45%, 11.5rem);
+  height: auto;
+  aspect-ratio: 1;
   border: 1px solid rgba(18, 24, 31, 0.08);
   border-radius: 50%;
   background: #e6e7e8;
@@ -338,9 +339,9 @@ a:focus-visible {
 }
 
 .contact-card > h2 {
-  margin: clamp(1.15rem, 1.65vw, 1.75rem) 0 0;
-  font-size: clamp(1.3rem, 1.65vw, 1.85rem);
-  font-weight: 570;
+  margin: clamp(1.1rem, 1.4vw, 1.5rem) 0 0;
+  font-size: clamp(1.45rem, 1.75vw, 2rem);
+  font-weight: 610;
   letter-spacing: -0.055em;
   line-height: 1;
   text-align: center;
@@ -348,28 +349,36 @@ a:focus-visible {
 
 .contact-card-actions {
   display: flex;
-  margin-top: clamp(1.15rem, 1.65vw, 1.75rem);
-  gap: clamp(0.55rem, 0.85vw, 0.85rem);
+  width: min(100%, 24rem);
+  margin-top: clamp(1.2rem, 1.55vw, 1.65rem);
+  justify-content: space-between;
+  gap: clamp(0.45rem, 0.65vw, 0.7rem);
 }
 
 .contact-card-actions a {
   display: grid;
-  width: clamp(2.85rem, 3.55vw, 3.6rem);
+  width: clamp(3rem, 18%, 4.5rem);
   aspect-ratio: 1;
   place-items: center;
-  border: 1px solid rgba(18, 24, 31, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.96);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(239, 241, 243, 0.66);
+  box-shadow:
+    0 10px 24px rgba(35, 43, 54, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 0 0 1px rgba(18, 24, 31, 0.055);
+  backdrop-filter: blur(14px) saturate(115%);
   color: var(--ink);
   transition:
     background-color 200ms ease,
-    color 200ms ease;
+    color 200ms ease,
+    box-shadow 200ms ease;
 }
 
 .contact-card-actions a:hover,
-.contact-card-actions a:focus-visible,
-.contact-card-actions .video-call-link {
+.contact-card-actions a:focus-visible {
   background: var(--ink);
+  box-shadow: 0 12px 26px rgba(5, 5, 5, 0.17);
   color: white;
 }
 
@@ -773,12 +782,11 @@ a:focus-visible {
   }
 
   .contact-card {
-    padding: 1.5rem 1rem;
+    padding: 1.35rem 1rem;
   }
 
   .contact-card-avatar {
-    width: clamp(7.5rem, 32vw, 9rem);
-    height: clamp(7.5rem, 32vw, 9rem);
+    width: clamp(8rem, 42vw, 10rem);
   }
 
   .contact-card > h2 {
@@ -789,10 +797,6 @@ a:focus-visible {
 
   .contact-card-actions {
     gap: 0.65rem;
-  }
-
-  .contact-card-actions a {
-    width: clamp(2.85rem, 14vw, 3.5rem);
   }
 
   .practice-panel {

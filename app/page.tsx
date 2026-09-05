@@ -1,5 +1,5 @@
 import Image, { type StaticImageData } from 'next/image';
-import Link from 'next/link';
+import { Navigation } from './navigation';
 
 const portfolio = {
   name: 'Aimed',
@@ -44,49 +44,7 @@ export default function Home() {
   return (
     <main>
       <section className="hero" aria-labelledby="hero-title">
-        <nav className="nav-pill" aria-label="Primary navigation">
-          <Link
-            className="nav-greeting is-active"
-            href="/"
-            aria-label="Hello in multiple languages, home"
-            aria-current="page"
-          >
-            <span className="greeting-window" aria-hidden="true">
-              <span lang="en">Hello 👋</span>
-              <span lang="ar" dir="rtl">
-                مرحباً 👋
-              </span>
-              <span lang="fr">Bonjour 👋</span>
-              <span lang="de">Hallo 👋</span>
-              <span lang="es">Hola 👋</span>
-              <span lang="kab">Azul 👋</span>
-            </span>
-          </Link>
-          <button
-            className="nav-name"
-            type="button"
-            disabled
-            title="Aimed page coming later"
-            aria-label="Aimed page coming later"
-          >
-            {portfolio.name}
-          </button>
-          <a className="nav-work" href="#selected-work">
-            Work
-            <span className="notification-dot" aria-hidden="true" />
-          </a>
-          <a
-            className="nav-linkedin"
-            href={portfolio.linkedin}
-            target="_blank"
-            rel="noreferrer"
-          >
-            LinkedIn
-          </a>
-          <a className="nav-contact" href="#contact">
-            Get in touch
-          </a>
-        </nav>
+        <Navigation active="home" />
 
         <div id="top" className="hero-copy">
           <h1 id="hero-title">

@@ -207,7 +207,7 @@ a:focus-visible {
   min-height: calc(100svh - clamp(8rem, 11vw, 11rem));
   margin: 0 auto;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-  gap: clamp(0.85rem, 1.25vw, 1.45rem);
+  gap: clamp(1.25rem, 2vw, 2.5rem);
   align-items: start;
 }
 
@@ -215,7 +215,7 @@ a:focus-visible {
   display: grid;
   min-width: 0;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(0.85rem, 1.25vw, 1.45rem);
+  gap: clamp(1.25rem, 2vw, 2.5rem);
   align-content: start;
 }
 
@@ -310,7 +310,7 @@ a:focus-visible {
 .contact-card {
   display: flex;
   min-width: 0;
-  padding: clamp(2rem, 3.2vw, 3.75rem);
+  padding: clamp(3rem, 5vw, 6rem);
   align-items: center;
   aspect-ratio: 16 / 10;
   grid-column: 1 / -1;
@@ -318,25 +318,27 @@ a:focus-visible {
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.92);
   border-radius: clamp(1.75rem, 2.35vw, 2.75rem);
-  background: #594025;
-  box-shadow: 0 24px 50px rgba(60, 42, 23, 0.18);
-  color: white;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow:
+    0 22px 55px rgba(43, 55, 70, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  color: var(--ink);
 }
 
 .contact-card-avatar {
   width: clamp(9.5rem, 13vw, 13.5rem);
   height: clamp(9.5rem, 13vw, 13.5rem);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(18, 24, 31, 0.08);
   border-radius: 50%;
-  background: #c89452;
+  background: #e6e7e8;
   object-fit: cover;
   object-position: 50% 43%;
 }
 
 .contact-card > h2 {
-  margin: clamp(1.35rem, 2.3vw, 2.25rem) 0 0;
+  margin: clamp(2rem, 3.2vw, 3.25rem) 0 0;
   font-size: clamp(1.85rem, 2.65vw, 3.25rem);
   font-weight: 570;
   letter-spacing: -0.055em;
@@ -346,8 +348,8 @@ a:focus-visible {
 
 .contact-card-actions {
   display: flex;
-  margin-top: clamp(1.5rem, 2.4vw, 2.35rem);
-  gap: clamp(0.7rem, 1.2vw, 1.15rem);
+  margin-top: clamp(2rem, 3.2vw, 3.25rem);
+  gap: clamp(0.9rem, 1.5vw, 1.5rem);
 }
 
 .contact-card-actions a {
@@ -355,10 +357,10 @@ a:focus-visible {
   width: clamp(3.7rem, 5vw, 4.8rem);
   aspect-ratio: 1;
   place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.52);
+  border: 1px solid rgba(18, 24, 31, 0.14);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.07);
-  color: white;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink);
   transition:
     background-color 200ms ease,
     color 200ms ease;
@@ -367,8 +369,8 @@ a:focus-visible {
 .contact-card-actions a:hover,
 .contact-card-actions a:focus-visible,
 .contact-card-actions .video-call-link {
-  background: white;
-  color: #594025;
+  background: var(--ink);
+  color: white;
 }
 
 .contact-card-actions svg {
@@ -738,12 +740,12 @@ a:focus-visible {
 
   .about-grid {
     grid-template-columns: minmax(0, 1fr);
-    gap: 0.65rem;
+    gap: 1rem;
   }
 
   .about-widgets {
     grid-template-columns: minmax(0, 1fr);
-    gap: 0.65rem;
+    gap: 1rem;
   }
 
   .contact-card,
@@ -767,8 +769,8 @@ a:focus-visible {
   }
 
   .contact-card {
-    min-height: 31rem;
-    padding: 2rem 1.25rem;
+    min-height: 33rem;
+    padding: 3rem 1.5rem;
     aspect-ratio: auto;
   }
 

@@ -92,7 +92,19 @@ export default function AimedPage() {
           </div>
         </article>
 
-        <div className="about-column">
+        <div className="about-widgets">
+          <article className="spotify-panel">
+            <iframe
+              title="Aimed's Spotify playlist"
+              src="https://open.spotify.com/embed/playlist/1gMwLnEXldpBcQcgfm2DSR?utm_source=generator&si=c17240e0cd5f45f8"
+              width="100%"
+              height="352"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+            />
+          </article>
+
           <article className="about-panel profile-panel">
             <header className="profile-header">
               <Image
@@ -133,20 +145,6 @@ export default function AimedPage() {
                 Visual references
               </p>
             </div>
-          </article>
-        </div>
-
-        <div className="about-column">
-          <article className="spotify-panel">
-            <iframe
-              title="Aimed's Spotify playlist"
-              src="https://open.spotify.com/embed/playlist/1gMwLnEXldpBcQcgfm2DSR?utm_source=generator&si=c17240e0cd5f45f8"
-              width="100%"
-              height="352"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
-            />
           </article>
 
           <article className="about-panel practice-panel">

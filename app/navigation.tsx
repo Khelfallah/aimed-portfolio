@@ -2,16 +2,16 @@
 /* oxlint-disable next/no-html-link-for-pages */
 
 const greetings = [
-  { text: 'Hello 👋', lang: 'en' },
-  { text: 'مرحباً 👋', lang: 'ar', dir: 'rtl' as const },
-  { text: 'Bonjour 👋', lang: 'fr' },
-  { text: 'Hallo 👋', lang: 'de' },
-  { text: 'Hola 👋', lang: 'es' },
-  { text: 'Azul 👋', lang: 'kab' },
+  { text: '👋 Hello', lang: 'en' },
+  { text: '👋 سلام', lang: 'ar' },
+  { text: '👋 Salut', lang: 'fr' },
+  { text: '👋 Hallo', lang: 'de' },
+  { text: '👋 Hola', lang: 'es' },
+  { text: '👋 Azul', lang: 'kab' },
 ];
 
 type NavigationProps = {
-  active: 'home' | 'aimed';
+  active: 'home' | 'aimed' | 'work';
 };
 
 export function Navigation({ active }: NavigationProps) {
@@ -38,13 +38,13 @@ export function Navigation({ active }: NavigationProps) {
       >
         Aimed
       </a>
-      <a className="nav-work" href="/#selected-work">
+      <a className="nav-work" href="/work" aria-current={active === 'work' ? 'page' : undefined}>
         Work
         <span className="notification-dot" aria-hidden="true" />
       </a>
       <a
         className="nav-linkedin"
-        href="https://www.linkedin.com"
+        href="https://www.linkedin.com/in/aimed/"
         target="_blank"
         rel="noreferrer"
       >

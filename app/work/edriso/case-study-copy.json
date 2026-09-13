@@ -1,0 +1,990 @@
+[
+  {
+    "id": "about-edriso",
+    "label": "Getting started",
+    "sections": [
+      {
+        "title": "About Edriso",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Edriso is an educational platform designed to make exam preparation easier for Algerian students."
+          },
+          {
+            "type": "paragraph",
+            "text": "It brings exams, solutions, and learning resources into one structured place, helping students quickly find relevant material based on their level, subject, year, stream, and exam type."
+          },
+          {
+            "type": "paragraph",
+            "text": "The broader vision is to go beyond simply providing documents and build a complete exam-preparation experience where students can practice, evaluate their performance, understand their mistakes, and progressively improve."
+          },
+          {
+            "type": "paragraph",
+            "text": "**I led the product strategy and UX/UI design of Edriso, creating a faster and more structured way for Algerian students to discover and practice with relevant exam resources.**"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "problem-and-goals",
+    "label": "Problem & Goals",
+    "sections": [
+      {
+        "title": "The Problem",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Exam preparation is a major part of education in Algeria. Students need relevant practice exams that match their level and curriculum."
+          },
+          {
+            "type": "paragraph",
+            "text": "However, resources are often scattered, low quality, and lack solutions, making it difficult to find the right exam and evaluate performance."
+          },
+          {
+            "type": "paragraph",
+            "text": "This led to the initial question:"
+          },
+          {
+            "type": "quote",
+            "text": "**How might we help Algerian students quickly find the right exam, practice with relevant material, and understand how well they performed?**"
+          }
+        ]
+      },
+      {
+        "title": "High-Stakes Goals",
+        "blocks": [
+          {
+            "type": "heading",
+            "text": "Find Relevant Resources Faster"
+          },
+          {
+            "type": "paragraph",
+            "text": "Reduce the effort required to find useful exam material through clear classification by level, subject, year, stream, and exam type."
+          },
+          {
+            "type": "heading",
+            "text": "Improve Resource Relevance"
+          },
+          {
+            "type": "paragraph",
+            "text": "Prioritize content that reflects the Algerian curriculum and the structure, difficulty, and expectations of the exams students are preparing for."
+          },
+          {
+            "type": "heading",
+            "text": "Improve Independent Practice"
+          },
+          {
+            "type": "paragraph",
+            "text": "Make exams more useful by pairing them with solutions and grading information that help students evaluate their own performance."
+          },
+          {
+            "type": "heading",
+            "text": "Build to scale"
+          },
+          {
+            "type": "paragraph",
+            "text": "Build a scalable solution for the future exam preparation, self-grading, progress tracking, personalized recommendations, and mock-exam experiences."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "my-role",
+    "label": "My Role",
+    "sections": [
+      {
+        "title": "My Role",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "**Founder · Product Designer · Product Owner**"
+          },
+          {
+            "type": "paragraph",
+            "text": "I led Edriso from concept to MVP, owning the product vision, strategy, user experience, interface design, and product requirements."
+          },
+          {
+            "type": "paragraph",
+            "text": "As Product Owner, I also managed implementation through an AI-assisted development workflow—translating design and product decisions into technical requirements, reviewing implementation, testing functionality, identifying gaps, and prioritizing improvements."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-process",
+    "label": "Design Process",
+    "sections": [
+      {
+        "title": "Design Process",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "I used a Design Thinking-inspired process, moving between research, definition, ideation, prototyping, validation, and implementation rather than treating each stage as strictly linear."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "research",
+    "label": "Research",
+    "sections": [
+      {
+        "title": "Discover",
+        "blocks": [
+          {
+            "type": "heading",
+            "text": "Validating the Opportunity"
+          },
+          {
+            "type": "paragraph",
+            "text": "Before committing significant time to the product, I wanted to answer a fundamental question:"
+          },
+          {
+            "type": "paragraph",
+            "text": "**Is this problem large and important enough to pursue?**"
+          },
+          {
+            "type": "paragraph",
+            "text": "I approached early validation through three areas:"
+          },
+          {
+            "type": "paragraph",
+            "text": "**Search demand · Market size · Academic research**"
+          },
+          {
+            "type": "paragraph",
+            "text": "Search behavior around Algerian exams demonstrated substantial existing demand for digital exam resources. Competitor traffic provided another signal that students were already using online platforms as part of their preparation."
+          },
+          {
+            "type": "paragraph",
+            "text": "I also evaluated the addressable student population and reviewed academic research around online learning, practice testing, self-assessment, mobile learning, and exam preparation."
+          },
+          {
+            "type": "paragraph",
+            "text": "The research suggested something important:"
+          },
+          {
+            "type": "paragraph",
+            "text": "**Edriso did not need to create a new student behavior. Students were already preparing online. The opportunity was to improve an existing behavior.**"
+          },
+          {
+            "type": "paragraph",
+            "text": "This research was developed further as part of my academic graduation thesis, where I examined the market, competitive environment, user behavior, and feasibility of the concept."
+          },
+          {
+            "type": "heading",
+            "text": "SEO demand"
+          },
+          {
+            "type": "paragraph",
+            "text": "Keyword research indicates strong demand for online educational resources in Algeria. EDRISO-relevant keywords collectively generate at least **5.8 million searches per month**, with **“dz exam” alone reaching approximately 2.24 million monthly searches** and ranking as the **20th most-searched keyword in Algeria**.¹ This highlights the significant organic search demand surrounding exam preparation and the opportunity for EDRISO to capture search-driven traffic.\n\n¹ Source: **Google Keyword Planner / Google Ads Keyword Research**, Algeria, 2026. Search volumes and rankings are estimates and may vary over time."
+          },
+          {
+            "type": "search-demand"
+          },
+          {
+            "type": "heading",
+            "text": "A Broad Search Opportunity"
+          },
+          {
+            "type": "paragraph",
+            "text": "Beyond individual high-volume keywords, the research identified a large cluster of heavily searched terms directly related to **exams and exam preparation**."
+          },
+          {
+            "type": "paragraph",
+            "text": "Together, these searches cover **BAC, BEM, school tests, assignments, past exam topics and solutions**, revealing strong search demand across multiple education levels and exam types."
+          },
+          {
+            "type": "paragraph",
+            "text": "This creates a significant **SEO opportunity for Edriso**. By structuring thousands of resources around the terms students already search for, we can capture existing intent through organic search and resolve the distribution issue, which has become a huge deal in the age of AI."
+          },
+          {
+            "type": "paragraph",
+            "text": "*¹ Source: Google Keyword Planner / Google Ads Keyword Research, Algeria, 2026.*"
+          },
+          {
+            "type": "keyword-opportunities"
+          }
+        ]
+      },
+      {
+        "title": "Competitive Research",
+        "blocks": [
+          {
+            "type": "heading",
+            "text": "Understanding the Existing Experience"
+          },
+          {
+            "type": "paragraph",
+            "text": "I analyzed existing Algerian exam-preparation platforms to understand what they already did well and where the experience could be improved."
+          },
+          {
+            "type": "paragraph",
+            "text": "The goal wasn't simply to produce a feature comparison. I wanted to understand the entire journey a student goes through when trying to practice:"
+          },
+          {
+            "type": "paragraph",
+            "text": "**Find →Open →  Evaluate  → Practice → Check → Grade → Decide what to do next**"
+          },
+          {
+            "type": "paragraph",
+            "text": "Existing platforms were effective at providing large quantities of educational material, but several recurring gaps appeared across that journey."
+          },
+          {
+            "type": "heading",
+            "text": "Competitive patterns"
+          },
+          {
+            "type": "table",
+            "rows": [
+              [
+                "Area",
+                "Ency‑Education",
+                "DZExams",
+                "Eddriassa",
+                "Opportunity",
+                "Existing Experience"
+              ],
+              [
+                "Resource volume",
+                "13,000",
+                "45,000",
+                "60,606",
+                "Improve organization and relevance",
+                "Large libraries"
+              ],
+              [
+                "Navigation",
+                "Outdated",
+                "Outdated",
+                "Complex",
+                "Reduce discovery friction",
+                "Often content-heavy"
+              ],
+              [
+                "Classification",
+                "Outdated",
+                "Decent",
+                "Complex",
+                "Create predictable academic structure",
+                "Available but inconsistent"
+              ],
+              [
+                "Solutions",
+                "21%",
+                "30%",
+                "25%",
+                "Prioritize exams with solutions",
+                "Not consistently available"
+              ],
+              [
+                "Resource quality",
+                "Varies",
+                "Varies",
+                "Varies",
+                "Establish stronger quality signals",
+                "Variable"
+              ],
+              [
+                "Self-evaluation",
+                "Not available",
+                "Not available",
+                "Not available",
+                "Introduce self-evaluation and grading guidance",
+                "Mostly manual"
+              ],
+              [
+                "Progress tracking",
+                "Not available",
+                "Not available",
+                "Not available",
+                "Build measurable exam preparation",
+                "Limited"
+              ],
+              [
+                "Personalization",
+                "Not available",
+                "Not available",
+                "Not available",
+                "Recommend relevant next steps",
+                "Limited"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The competitive opportunity wasn't therefore:"
+          },
+          {
+            "type": "paragraph",
+            "text": "**“Build another exam website.”**"
+          },
+          {
+            "type": "paragraph",
+            "text": "It was:"
+          },
+          {
+            "type": "paragraph",
+            "text": "**“Turn exam banks into a structured, integrated, end-to-end exam preparation experience.”**"
+          }
+        ]
+      },
+      {
+        "title": "User Research",
+        "blocks": [
+          {
+            "type": "heading",
+            "text": "Understanding How Students Actually Prepare"
+          },
+          {
+            "type": "paragraph",
+            "text": "After conducting a competitive audit, gathering feedback on existing products, and testing those platforms extensively, we moved to user interviews."
+          },
+          {
+            "type": "paragraph",
+            "text": "We recruited six potential users who matched our target user profile. Rather than focusing solely on how they used existing exam platforms, we explored their entire exam-preparation process—from finding and selecting an exam to practicing, grading their performance, identifying weaknesses, and deciding what to study next."
+          },
+          {
+            "type": "paragraph",
+            "text": "This helped us understand the broader behaviors, frustrations, and needs surrounding exam preparation, rather than limiting our research to individual platform features."
+          },
+          {
+            "type": "empathy-map"
+          }
+        ]
+      },
+      {
+        "title": "Key Findings",
+        "blocks": [
+          {
+            "type": "heading",
+            "text": "01 — Finding a resource isn't the same as finding the right resource"
+          },
+          {
+            "type": "paragraph",
+            "text": "Students could find exam PDFs online, but determining whether a resource matched their exact level, subject, stream, year, and preparation needs often required additional searching."
+          },
+          {
+            "type": "heading",
+            "text": "02 — Resource quality is inconsistent"
+          },
+          {
+            "type": "paragraph",
+            "text": "Not every available exam accurately reflects the curriculum, expected difficulty, or structure of the examination students are preparing for."
+          },
+          {
+            "type": "heading",
+            "text": "03 — Solutions are part of the learning experience"
+          },
+          {
+            "type": "paragraph",
+            "text": "An exam without a useful solution limits independent practice."
+          },
+          {
+            "type": "paragraph",
+            "text": "Students need to compare their reasoning with the expected answer and understand where they lost marks."
+          },
+          {
+            "type": "heading",
+            "text": "04 — Students struggle to evaluate themselves"
+          },
+          {
+            "type": "paragraph",
+            "text": "Completing an exam doesn't automatically tell students whether they are prepared."
+          },
+          {
+            "type": "paragraph",
+            "text": "Without grading guidance, students struggle to translate their performance into a meaningful score or identify specific weaknesses."
+          },
+          {
+            "type": "heading",
+            "text": "05 — Existing platforms provide resources, not preparation journeys"
+          },
+          {
+            "type": "paragraph",
+            "text": "Most platforms help students access material but provide limited guidance around what to practice next, how difficult the next exam should be, or whether the student is improving."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "define",
+    "label": "Define",
+    "sections": [
+      {
+        "title": "Define",
+        "blocks": [
+          {
+            "type": "heading",
+            "text": "Reframing the Problem"
+          },
+          {
+            "type": "paragraph",
+            "text": "My initial assumption was that Edriso primarily needed to solve **resource discovery**."
+          },
+          {
+            "type": "paragraph",
+            "text": "Research showed that discovery was only the first layer."
+          },
+          {
+            "type": "paragraph",
+            "text": "A student might have to:"
+          },
+          {
+            "type": "button-flow",
+            "items": [
+              "**Search for an exam**",
+              "**Determine whether it is relevant**",
+              "**Download/open it**",
+              "**Complete it**",
+              "Open the solution",
+              "**Compare answers**",
+              "**Estimate a grade**",
+              "**Identify weaknesses**",
+              "**Decide what to practice next**"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The real problem was the fragmentation between these steps."
+          },
+          {
+            "type": "paragraph",
+            "text": "This changed the product definition:"
+          },
+          {
+            "type": "quote",
+            "text": "**Edriso shouldn't simply help students find exams. It should progressively reduce the uncertainty between finding an exam and knowing whether you're ready for the real one.**"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prioritization",
+    "label": "Prioritization",
+    "sections": [
+      {
+        "title": "Prioritization",
+        "blocks": [
+          {
+            "type": "heading",
+            "text": "Defining the MVP"
+          },
+          {
+            "type": "paragraph",
+            "text": "Research uncovered opportunities across the entire exam-preparation journey. However, building everything at once would have resulted in an unfocused first release, made it harder for users to understand the product’s core value, and introduced too many variables to clearly measure whether our solutions were actually improving the experience."
+          },
+          {
+            "type": "paragraph",
+            "text": "Instead, I treated the MVP as an opportunity to validate our research incrementally. Each feature needed to address a specific problem we had identified and contribute to a measurable part of the exam-preparation journey."
+          },
+          {
+            "type": "paragraph",
+            "text": "I prioritized features around three questions:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Does this solve the immediate discovery and practice problem?",
+              "Is this necessary before more advanced preparation features can work?",
+              "Does it make the core experience meaningfully better than existing competitors?"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "This led to a deliberately narrower MVP focused on creating a stronger foundation for finding, evaluating, and practicing exams."
+          },
+          {
+            "type": "product-scope",
+            "columns": [
+              {
+                "phase": "First release",
+                "title": "MVP",
+                "summary": "A structured exam library that makes it easy to find, practice and check.",
+                "items": [
+                  {
+                    "title": "Structured exam library",
+                    "description": "A centralized, organized collection of exams and resources."
+                  },
+                  {
+                    "title": "Academic classification",
+                    "description": "Browse by level, subject, year, branch and exam type."
+                  },
+                  {
+                    "title": "Exam/resource pages",
+                    "description": "Clear, focused pages with key information."
+                  },
+                  {
+                    "title": "Solutions",
+                    "description": "Access step-by-step solutions."
+                  },
+                  {
+                    "title": "PDF viewing",
+                    "description": "A smooth, readable in-browser PDF experience."
+                  },
+                  {
+                    "title": "Filtering",
+                    "description": "Quickly narrow down results with simple filters."
+                  },
+                  {
+                    "title": "Recommendations",
+                    "description": "Discover relevant exams based on your interests and activity."
+                  },
+                  {
+                    "title": "Downloads",
+                    "description": "Download exams and solutions for offline use."
+                  },
+                  {
+                    "title": "Content contribution/moderation foundation",
+                    "description": "Allow users to contribute resources, with a moderation workflow."
+                  }
+                ]
+              },
+              {
+                "phase": "Next phase",
+                "title": "Later",
+                "summary": "Build on the foundation with a more complete learning experience.",
+                "items": [
+                  {
+                    "title": "Interactive answering",
+                    "description": "Practice directly on the platform."
+                  },
+                  {
+                    "title": "Automatic grading",
+                    "description": "Get instant results and explanations."
+                  },
+                  {
+                    "title": "Performance history",
+                    "description": "Track progress over time."
+                  },
+                  {
+                    "title": "Adaptive difficulty",
+                    "description": "Questions tailored to your level."
+                  },
+                  {
+                    "title": "Personalized learning paths",
+                    "description": "A study plan based on your goals and performance."
+                  },
+                  {
+                    "title": "Full mock-exam mode",
+                    "description": "A realistic exam experience."
+                  },
+                  {
+                    "title": "AI-assisted tutoring",
+                    "description": "Get clear explanations and support whenever you’re stuck."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The MVP therefore became:"
+          },
+          {
+            "type": "quote",
+            "text": "**Make high-quality, curriculum-aligned exam resources easy to discover, access, and practice with.**"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "information-architecture",
+    "label": "Information Architecture",
+    "sections": [
+      {
+        "title": "Designing the Information Architecture",
+        "blocks": [
+          {
+            "type": "heading",
+            "text": "Turning Thousands of Files Into a Predictable System"
+          },
+          {
+            "type": "paragraph",
+            "text": "One of the central UX challenges was scale. Edriso was designed to eventually contain thousands of resources across secondary, middle, and primary education, making a flat document library increasingly difficult to navigate as the platform grew. To address this, the information architecture was structured around the way Algerian students already think about their education. Instead of beginning with individual files, the system begins with the student’s **academic context**, creating a more intuitive path from education level and year to stream where relevant, subject, and the right exam or resource."
+          },
+          {
+            "type": "heading",
+            "text": "Core hierarchy"
+          },
+          {
+            "type": "information-architecture-tree",
+            "tree": {
+              "title": "EDRISO",
+              "children": [
+                {
+                  "title": "Education Level",
+                  "children": [
+                    { "title": "Primary" },
+                    { "title": "Middle" },
+                    { "title": "High" }
+                  ]
+                },
+                { "title": "Grade" },
+                { "title": "Stream / Speciality (when applicable)" },
+                { "title": "Subject" },
+                {
+                  "title": "Resource Library",
+                  "children": [
+                    { "title": "Exams" },
+                    { "title": "Tests" }
+                  ]
+                },
+                {
+                  "title": "Resource Page",
+                  "children": [
+                    { "title": "Preview" },
+                    { "title": "Solution" },
+                    { "title": "Download" }
+                  ]
+                },
+                { "title": "Related Resources" }
+              ]
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "Each exam then carries additional metadata such as year, difficulty, solution availability, classification, and other relevant attributes."
+          },
+          {
+            "type": "paragraph",
+            "text": "This architecture allows the interface to progressively narrow a very large library into a manageable set of relevant resources."
+          },
+          {
+            "type": "paragraph",
+            "text": "It also creates structured data that can later power recommendations, personalization, search, and adaptive learning."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-decisions",
+    "label": "Design Decisions",
+    "sections": [
+      {
+        "title": "#1 Reducing clicks on discovery",
+        "blocks": [
+          {
+            "type": "heading",
+            "text": "Problem"
+          },
+          {
+            "type": "paragraph",
+            "text": "Edriso covers multiple education levels, streams, and subjects. As the number of resources grows, navigating through this hierarchy can make content discovery increasingly difficult."
+          },
+          {
+            "type": "heading",
+            "text": "Approach"
+          },
+          {
+            "type": "paragraph",
+            "text": "I structured navigation around the existing Algerian school system, preserving a hierarchy students are already familiar with:"
+          },
+          {
+            "type": "paragraph",
+            "text": "**Level → Stream → Subject → Exams**"
+          },
+          {
+            "type": "paragraph",
+            "text": "Accordions progressively reveal options, reducing the amount of information displayed at once while keeping the interaction consistent and predictable. Familiar visual icons were also introduced to make levels and categories easier to recognize and reduce the time required to locate the right section."
+          },
+          {
+            "type": "paragraph",
+            "text": "Once users reach the resource library, filters allow them to refine the results further without making the primary navigation more complex."
+          },
+          {
+            "type": "heading",
+            "text": "Why"
+          },
+          {
+            "type": "paragraph",
+            "text": "Rather than introducing a new organizational model for students to learn, the architecture mirrors their existing mental model of the school system. This reduces cognitive load, makes navigation more predictable, and allows the library to scale without making resource discovery increasingly difficult."
+          }
+        ]
+      },
+      {
+        "title": "#2 Judge Relevance Before Opening an Exam",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Finding an exam quickly is only useful if students can also determine whether it is relevant to their needs. Resource cards and exam pages therefore surface key contextual information before students begin practicing, including **subject, year, stream, exam type, solution availability, difficulty, views, and downloads**. These signals help students judge both suitability and relevance, including whether an exam is being practiced more frequently than others."
+          }
+        ]
+      },
+      {
+        "title": "#03 Treat the Exam as an Experience, Not a Download",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Many educational websites treat the PDF as the end of the journey. For Edriso, opening an exam is designed to be the beginning of practice. The viewing experience keeps the exam, contextual information, solutions, and relevant actions within the same environment, creating a more connected practice experience while establishing the foundation for Edriso’s future transition from static PDFs to fully interactive exams."
+          }
+        ]
+      },
+      {
+      "title": "#4 Designing for Trust and Relevance",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Trust in Edriso is not simply a visual decision. It is a **product decision about how resources are sourced, structured, verified, and presented**."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "A Team of Experienced Teachers"
+        },
+        {
+          "type": "paragraph",
+          "text": "To ensure resource quality, **experienced teachers across different subjects** review educational materials and create relevant, high-value exams and content. This helps keep resources **accurate, curriculum-aligned, and responsive to changes in the education program**."
+        },
+        {
+          "type": "image",
+          "src": "/work/edriso/experienced-teachers.png",
+          "alt": "Teacher profile card with a blue verification badge on an orange background.",
+          "width": 4627,
+          "height": 2454,
+          "size": "small"
+        },
+        {
+          "type": "heading",
+          "text": "Making the Source Visible"
+        },
+        {
+          "type": "paragraph",
+          "text": "Every resource clearly shows its origin: **Edriso, an official examination, an independent teacher, or a community contributor**. This distinction matters because an Edriso-created exam is not equivalent to one that was actually used in a school."
+        },
+        {
+          "type": "image",
+          "src": "/work/edriso/resource-source.png",
+          "size": "small",
+          "alt": "Edriso resource card identifying an Official School Exam, with semester, year, difficulty, views, and downloads.",
+          "width": 1722,
+          "height": 913
+        },
+        {
+          "type": "heading",
+          "text": "Structuring Resources for Clarity"
+        },
+        {
+          "type": "paragraph",
+          "text": "Consistent titles, classifications, and academic metadata help students understand **what a resource is, who it is for, and how relevant it is** before practicing. Resources are also reviewed before entering the public library."
+        },
+        {
+          "type": "image",
+          "src": "/work/edriso/resource-clarity.png",
+          "alt": "Edriso mathematics exam page with an official school exam title and metadata for trimester, academic year, difficulty, and resource identifier above the PDF viewer.",
+          "width": 4627,
+          "height": 2454,
+          "size": "small"
+        },
+        {
+          "type": "heading",
+          "text": "Crowdsourcing Content"
+        },
+        {
+          "type": "paragraph",
+          "text": "As the community grows, students and teachers can contribute resources through a **reward and revenue-sharing system**."
+        },
+        {
+          "type": "image",
+          "src": "/work/edriso/crowdsourcing-upload.png",
+          "alt": "Edriso exam contribution interface with a PDF upload area and a notice that uploads are reviewed before publication.",
+          "width": 4627,
+          "height": 2454,
+          "size": "small"
+        }
+      ]
+      },
+      {
+        "title": "#5 Curriculum-Aligned Practice",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Quantity alone does not make an educational platform useful. Students need practice material that reflects the **curriculum, expected difficulty, question structure, and grading standards** of the exams they are preparing for."
+          },
+          {
+            "type": "paragraph",
+            "text": "For the MVP, I designed a content system that connects each resource to its specific academic context. Practice exams and solutions follow, wherever possible, the **same structure, visual conventions, and grading approach used in official examinations**."
+          },
+          {
+            "type": "paragraph",
+            "text": "By maintaining this consistency throughout the learning journey, students become familiar with how questions are presented, how exams are structured, and how answers are evaluated. By the time they reach major examinations such as the **BEM or BAC**, the format and grading system should already feel familiar, making the final exam easier to navigate and understand."
+          },
+          {
+            "type": "image",
+            "src": "/work/edriso/curriculum-exam-structure.png",
+            "alt": "Annotated Arabic exam page with orange callouts highlighting the education year, exam title, subject and stream, exam duration, and section title.",
+            "width": 1536,
+            "height": 1024
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "validation",
+    "label": "Validation",
+    "sections": [
+      {
+        "title": "Validation",
+        "blocks": [
+          {
+            "type": "heading",
+            "text": "Testing Whether Students Could Actually Find What They Needed"
+          },
+          {
+            "type": "paragraph",
+            "text": "Once the primary flows were established, I tested the MVP’s most important task:"
+          },
+          {
+            "type": "paragraph",
+            "text": "**finding a relevant exam and beginning practice.**"
+          },
+          {
+            "type": "paragraph",
+            "text": "I tested the flow with **8 participants**, using realistic scenarios rather than instructions about where to click. The goal was to identify friction and determine whether Edriso could help students **reach the right exam faster than existing platforms.**"
+          },
+          {
+            "type": "paragraph",
+            "text": "**Time to level — 3m 42s → 1m 35s · ↓ 57%**"
+          },
+          {
+            "type": "paragraph",
+            "text": "Measured how quickly participants could navigate to the correct academic level and subject."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Time to resource — 10m 42s → 2m · ↓ 81%**"
+          },
+          {
+            "type": "paragraph",
+            "text": "Measured the total time required to find and open the relevant exam."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Navigation errors — ↓ 50%**"
+          },
+          {
+            "type": "paragraph",
+            "text": "Tracked wrong selections, unnecessary steps, and backtracking."
+          },
+          {
+            "type": "paragraph",
+            "text": "**Comprehension — 7/8 participants**"
+          },
+          {
+            "type": "paragraph",
+            "text": "Understood the key metadata, actions, and solution states without additional explanation."
+          },
+          {
+            "type": "paragraph",
+            "text": "The results showed that the redesigned flow **reduced time-to-resource by 81%**, substantially shortening the path from discovery to practice."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "building-the-product",
+    "label": "Building the Product",
+    "sections": [
+      {
+        "title": "Building the Product",
+        "blocks": [
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "From Figma to a Functional Platform"
+          },
+          {
+            "type": "paragraph",
+            "text": "My responsibilities extended beyond designing and prototyping in Figma. I took the product from **design concepts to a functional, deployed platform** through an AI-assisted development workflow."
+          },
+          {
+            "type": "paragraph",
+            "text": "**[View Figma Prototype →]**"
+          },
+          {
+            "type": "paragraph",
+            "text": "As **Product Owner**, I translated product and design requirements into clear implementation specifications, defining **expected behaviors, edge cases, content structures, responsive requirements, and acceptance criteria** before reviewing and refining the resulting implementation."
+          },
+          {
+            "type": "paragraph",
+            "text": "My involvement also extended into **frontend and backend development, SEO optimization, performance improvements, testing, and deployment**, allowing me to maintain consistency between the original product vision and the final experience."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "beyond-the-mvp",
+    "label": "Beyond the MVP",
+    "sections": [
+      {
+        "title": "Designing Beyond the MVP",
+        "blocks": [
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "From Static Exams to Interactive Practice"
+          },
+          {
+            "type": "paragraph",
+            "text": "The MVP establishes the foundation by helping students **find, evaluate, and practice with relevant exam material**, but the long-term vision is to make Edriso an **integrated part of the entire exam-preparation journey**. Students can first prepare through **exam-specific revision**, focusing on the subjects, chapters, question types, and weaknesses most relevant to their upcoming exam. As they progress, they can move into **timed mock exams**, receive structured grading, identify gaps, track performance, and get recommended practice before retesting. This creates a continuous **Revise → Practice → Test → Grade → Improve → Retest** loop, taking students from early preparation through to realistic simulation of the final exam."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "reflection",
+    "label": "Reflection & Outcome",
+    "sections": [
+      {
+        "title": "Reflection",
+        "blocks": [
+          {
+            "type": "heading",
+            "text": "What I Learned"
+          },
+          {
+            "type": "paragraph",
+            "text": "Working on Edriso taught me several lessons that changed how I approach product design. First, **designers in the AI era need to move faster from design to working prototypes**. Figma remains valuable, but being able to turn ideas into functional experiences quickly allows you to test assumptions earlier and learn from real behavior rather than polished screens alone."
+          },
+          {
+            "type": "paragraph",
+            "text": "I also learned that **research cannot be rushed**. Existing academic research can provide a strong foundation for forming initial hypotheses, understanding established patterns, and identifying what is already known. This makes your own research more focused rather than starting from zero."
+          },
+          {
+            "type": "paragraph",
+            "text": "Finally, being a **second mover does not mean reinventing everything**. Existing products and user behaviors create conventions that should be understood and respected. Through analogous and competitive research, I learned that sometimes the better design decision is not to reinvent the wheel, but to **preserve what users already understand and improve the experience where it matters**."
+          }
+        ]
+      },
+      {
+        "title": "Outcome",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "The MVP established a working foundation for helping students discover, evaluate, and access relevant exam-preparation resources more efficiently. Usability testing showed a significant reduction in time-to-resource, fewer navigation errors, and stronger comprehension of resource information."
+          },
+          {
+            "type": "paragraph",
+            "text": "With the core experience now validated and operational, **Edriso has moved from product development into distribution and growth**. The current focus is expanding the **quality and quantity of curriculum-aligned content**, strengthening the resource library, improving discoverability, and acquiring users in a market currently dominated by established competitors."
+          },
+          {
+            "type": "paragraph",
+            "text": "The next measure of success is no longer simply whether the experience works, but whether Edriso can **build recurring usage, grow organic traffic, and capture meaningful market share**."
+          }
+        ]
+      }
+    ]
+  }
+]

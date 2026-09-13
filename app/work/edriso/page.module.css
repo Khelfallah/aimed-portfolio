@@ -1,0 +1,248 @@
+.page {
+  position: relative;
+  min-height: 100svh;
+  background: #f8f8f8;
+  color: #000;
+}
+
+.header {
+  display: flex;
+  min-height: 100svh;
+  padding: clamp(10rem, 13.25vw, 17rem) 1.5rem clamp(4rem, 5.5vw, 7rem);
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 1.4vw, 1.75rem);
+  text-align: left;
+}
+
+.brandCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.brandName {
+  font-size: clamp(1.125rem, 1.4vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.brandCategory {
+  font-size: clamp(0.875rem, 0.9vw, 1.125rem);
+  line-height: 1.4;
+}
+
+/* Display only the supplied brand mark, retaining its original pixels. */
+.logo {
+  position: relative;
+  width: clamp(3rem, 3.6vw, 4.5rem);
+  aspect-ratio: 1;
+  flex: none;
+  overflow: hidden;
+  border-radius: 23%;
+}
+
+.logoReference {
+  position: absolute;
+  top: calc(-161 / 116 * 100%);
+  left: calc(-652 / 116 * 100%);
+  width: calc(1462 / 116 * 100%);
+  max-width: none;
+  height: auto;
+}
+
+.title {
+  max-width: 70rem;
+  margin: clamp(2.25rem, 3.2vw, 4rem) 0 0;
+  font-size: clamp(2.25rem, 4.6vw, 5.5rem);
+  font-weight: 750;
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+}
+
+.title span,
+.summary span {
+  display: block;
+}
+
+.summary {
+  max-width: 55rem;
+  margin: clamp(2rem, 3.2vw, 4rem) 0 0;
+  font-size: clamp(0.95rem, 1.35vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+}
+
+.project {
+  max-width: 92rem;
+  margin: 0 auto;
+  padding: clamp(3rem, 5vw, 5rem) var(--page-gutter) 0;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 1.5rem;
+  margin: 0 0 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--hairline);
+}
+
+.facts dt {
+  color: #636363;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.facts dd {
+  margin: 0.45rem 0 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.resources {
+  position: relative;
+  display: flex;
+  height: max(48rem, 100svh);
+  padding: clamp(2rem, 3vw, 3rem) 1.5rem 0;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    #f8f8f8 0%,
+    #f8f5f2 15%,
+    #fae7d8 35%,
+    #fcd3b1 55%,
+    #feba7f 78%,
+    #ffa45c 100%
+  );
+}
+
+.resourcesTitle {
+  z-index: 1;
+  flex: none;
+  max-width: 75rem;
+  margin: clamp(1.75rem, 2.5vw, 2.5rem) 0 0;
+  color: rgb(255 102 0 / 50%);
+  font-size: clamp(1.75rem, 3.4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+  text-align: center;
+}
+
+.resourcesTitle span {
+  display: block;
+}
+
+.resourceCover {
+  width: min(80vw, 80rem);
+  flex: none;
+  margin: clamp(3rem, 5vw, 5rem) 0 0;
+  overflow: hidden;
+  border: clamp(0.5rem, 1.1vw, 1.1rem) solid #ffffffb3;
+  border-radius: clamp(1.5rem, 3vw, 3rem);
+  background: #fff;
+  box-shadow: 0 1.5rem 5rem #d8662526;
+  transform: perspective(100rem) rotateX(5deg) rotateZ(-2deg);
+  transform-origin: center top;
+}
+
+.resourceCover img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.footer > span {
+  color: #636363;
+  font-size: 0.875rem;
+}
+
+.footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 2.75rem;
+  font-size: 1rem;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+@media (max-width: 700px) {
+  .resources {
+    height: auto;
+    min-height: 100svh;
+    padding: 3rem 1.25rem;
+    justify-content: center;
+  }
+
+  .resourcesTitle {
+    font-size: clamp(1.7rem, 5.5vw, 2.4rem);
+    text-wrap: balance;
+  }
+
+  .resourceCover {
+    width: 100%;
+    margin-top: 2.5rem;
+    transform: rotate(-2deg);
+  }
+
+  .header {
+    padding: 9rem 1.25rem 4rem;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: clamp(1.75rem, 6vw, 2.6rem);
+    line-height: 1.12;
+  }
+
+  .summary {
+    max-width: 32rem;
+    line-height: 1.45;
+    text-wrap: balance;
+  }
+
+  .summary span {
+    display: inline;
+  }
+
+  .facts {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .facts > div {
+    display: grid;
+    grid-template-columns: 5.5rem minmax(0, 1fr);
+    gap: 0.75rem;
+    align-items: baseline;
+  }
+
+  .facts dd {
+    margin: 0;
+  }
+}

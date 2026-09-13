@@ -366,7 +366,6 @@ a:focus-visible {
   container-type: inline-size;
   display: flex;
   min-width: 0;
-  min-height: 34rem;
   padding: 8% 9.2% 7.5%;
   align-items: center;
   aspect-ratio: 1;
@@ -1033,7 +1032,9 @@ a:focus-visible {
 .project {
   container-type: inline-size;
   display: flex;
+  width: 100%;
   min-width: 0;
+  min-height: 34rem;
   aspect-ratio: 900 / 1308;
   overflow: hidden;
   flex-direction: column;

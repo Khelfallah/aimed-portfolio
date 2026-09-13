@@ -9,6 +9,7 @@ type Project = {
   image: string | StaticImageData;
   alt: string;
   href?: string;
+  className?: string;
 };
 
 const projects: Project[] = [
@@ -17,8 +18,9 @@ const projects: Project[] = [
     href: '/work/edriso',
     headline: 'A clearer path to exam preparation',
     description: 'Helping Algerian students find, evaluate, and practice with relevant exams.',
-    image: '/work/edriso.png',
-    alt: 'Blue editorial product-design composition with a mobile interface and learning sheets',
+    image: '/work/edriso-homepage.png',
+    alt: 'Edriso homepage with school navigation and an exam platform for Algerian students, built by experienced teachers',
+    className: styles.edriso,
   },
   {
     title: 'Project 02',
@@ -63,7 +65,7 @@ export function WorkSection() {
             </>;
 
             return (
-              <article className="project" key={project.title}>
+              <article className={`project ${project.className ?? ''}`} key={project.title}>
                 {project.href ? (
                   <a className={styles.link} href={project.href} aria-label={`View ${project.title} project`}>
                     {content}

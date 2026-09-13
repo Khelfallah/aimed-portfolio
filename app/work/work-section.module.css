@@ -9,3 +9,27 @@
 .link:focus-visible {
   outline-offset: -5px;
 }
+
+.edriso:global(.project) {
+  background: linear-gradient(
+    180deg,
+    #f8f8f8 0%,
+    #f8f5f2 15%,
+    #fae7d8 35%,
+    #fcd3b1 55%,
+    #feba7f 78%,
+    #ffa45c 100%
+  );
+}
+
+.edriso :global(.project-image) {
+  width: 88%;
+  aspect-ratio: 2888 / 1468;
+  margin-bottom: 14%;
+  border: clamp(0.35rem, 1.2cqw, 0.75rem) solid #fff;
+  border-radius: clamp(0.85rem, 3.5cqw, 2rem);
+  background: #fff;
+  box-shadow: 0 3cqw 9cqw #d8662526;
+  transform: perspective(70rem) rotateX(5deg) rotateZ(-2deg);
+  transform-origin: center top;
+}

@@ -11,7 +11,7 @@ const greetings = [
 ];
 
 type NavigationProps = {
-  active: 'home' | 'aimed' | 'work';
+  active: 'home' | 'aimed' | 'work' | 'contact';
 };
 
 export function Navigation({ active }: NavigationProps) {
@@ -50,7 +50,7 @@ export function Navigation({ active }: NavigationProps) {
       >
         LinkedIn
       </a>
-      <a className="nav-contact" href="/#contact">
+      <a className="nav-contact" href="/contact" aria-current={active === 'contact' ? 'page' : undefined}>
         Get in touch
       </a>
     </nav>

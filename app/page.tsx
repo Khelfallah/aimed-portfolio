@@ -2,19 +2,20 @@ import Image from 'next/image';
 import { WorkSection } from './work/work-section';
 import { Navigation } from './navigation';
 import { AboutSection } from './aimed/about-section';
+import { ContactSection } from './contact-section';
 
 const portfolio = {
   name: 'Aimed',
   headline: ['Aimed designs brands,', 'digital products &', 'experiences.'],
   disciplines: 'Creative Director · UX Designer · Graphic Designer',
   detail: '10+ years of design. Algeria-based.',
-  email: 'mailto:hello@aimed.design',
+  email: 'mailto:khalfellah@outlook.fr',
   linkedin: 'https://www.linkedin.com/in/aimed/',
 };
 
 export default function Home() {
   return (
-    <main>
+    <main className="landing-page">
       <section className="hero" aria-labelledby="hero-title">
         <Navigation active="home" />
 
@@ -40,22 +41,14 @@ export default function Home() {
         </div>
       </section>
 
-      <WorkSection />
+      <WorkSection showTitle />
 
-      <div id="aimed" className="about-page">
+      <section id="aimed" className="about-page" aria-labelledby="about-section-title">
+        <h2 id="about-section-title" className="landing-section-title">About me</h2>
         <AboutSection />
-      </div>
+      </section>
 
-      <footer id="contact" className="contact">
-        <p>Have a project in mind?</p>
-        <div className="contact-links">
-          <a href={portfolio.email}>Email</a>
-          <a href={portfolio.linkedin} target="_blank" rel="noreferrer">
-            LinkedIn
-          </a>
-        </div>
-        <small>© {new Date().getFullYear()} Aimed</small>
-      </footer>
+      <ContactSection />
     </main>
   );
 }

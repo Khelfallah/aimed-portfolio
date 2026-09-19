@@ -1,14 +1,20 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 import { ImageWidget } from './image-widget';
 import { ContactsWidget } from './contacts-widget';
 import { TravelCard } from './travel-card';
+import { MusicWidget } from './music-widget';
 
 /* oxlint-disable next/no-html-link-for-pages */
 
 export function AboutSection() {
+  const [expanded, setExpanded] = useState(false);
+
   return (
       <section className="about-grid" aria-labelledby="about-title">
-        <article className="about-panel about-story">
+        <article className={`about-panel about-story${expanded ? ' about-story-expanded' : ''}`}>
           <div className="window-dots" aria-hidden="true">
             <span />
             <span />
@@ -16,7 +22,7 @@ export function AboutSection() {
           </div>
           <h1 id="about-title">Me without filters</h1>
 
-          <div className="story-copy">
+          <div id="about-biography" className="story-copy">
             <section>
               <h2>Where I&apos;m From</h2>
               <p>
@@ -82,6 +88,15 @@ export function AboutSection() {
               </p>
             </section>
           </div>
+          <button
+            type="button"
+            className="story-toggle"
+            aria-expanded={expanded}
+            aria-controls="about-biography"
+            onClick={() => setExpanded((value) => !value)}
+          >
+            {expanded ? 'Show less' : '… Read more'}
+          </button>
         </article>
 
         <div className="about-widgets">
@@ -98,7 +113,7 @@ export function AboutSection() {
             <h2 id="contact-card-name">Aimed Eddine Khelfallah</h2>
             <div className="contact-card-actions" aria-label="Contact options">
               <a
-                href="mailto:hello@aimed.design?subject=Hello%20Aimed"
+                href="mailto:khalfellah@outlook.fr?subject=Hello%20Aimed"
                 aria-label="Send Aimed a message"
                 title="Message"
               >
@@ -107,7 +122,7 @@ export function AboutSection() {
                 </svg>
               </a>
               <a
-                href="mailto:hello@aimed.design?subject=Call%20request"
+                href="mailto:khalfellah@outlook.fr?subject=Call%20request"
                 aria-label="Request a phone call with Aimed"
                 title="Request a call"
               >
@@ -117,7 +132,7 @@ export function AboutSection() {
               </a>
               <a
                 className="video-call-link"
-                href="mailto:hello@aimed.design?subject=Video%20call%20request"
+                href="mailto:khalfellah@outlook.fr?subject=Video%20call%20request"
                 aria-label="Request a video call with Aimed"
                 title="Request a video call"
               >
@@ -126,7 +141,7 @@ export function AboutSection() {
                 </svg>
               </a>
               <a
-                href="mailto:hello@aimed.design"
+                href="mailto:khalfellah@outlook.fr"
                 aria-label="Email Aimed"
                 title="Email"
               >
@@ -141,11 +156,12 @@ export function AboutSection() {
           <ContactsWidget />
 
           <TravelCard />
+          <MusicWidget />
 
           <article className="about-panel practice-panel resume-panel">
             <div className="practice-image">
               <Image
-                src="/resume-card.png"
+                src="/resume-card-transparent.png"
                 alt="Résumé document illustration"
                 fill
                 sizes="180px"
@@ -153,7 +169,7 @@ export function AboutSection() {
             </div>
             <div className="practice-copy">
               <h2>Check my resume</h2>
-              <p>Brand, product &amp; experience</p>
+              <p>Get a PDF version of my resume</p>
             </div>
             <button
               type="button"

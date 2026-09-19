@@ -10,16 +10,53 @@
   outline-offset: -5px;
 }
 
+.tags {
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  width: 86%;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.statusTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 0.42em 0.65em;
+  border: 1.5px solid #cececa;
+  border-radius: 999px;
+  background: transparent;
+  color: #81827e;
+  font-size: clamp(0.7rem, 2.5cqw, 0.9rem);
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.statusTag svg {
+  width: 0.85em;
+  height: 0.85em;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .edriso:global(.project) {
-  background: linear-gradient(
-    180deg,
-    #f8f8f8 0%,
-    #f8f5f2 15%,
-    #fae7d8 35%,
-    #fcd3b1 55%,
-    #feba7f 78%,
-    #ffa45c 100%
-  );
+  --project-accent: 255 133 55;
+  background: #ffffff;
+}
+
+.brand:global(.project) {
+  --project-accent: 207 45 51;
 }
 
 .edriso :global(.project-image) {
@@ -30,6 +67,6 @@
   border-radius: clamp(0.85rem, 3.5cqw, 2rem);
   background: #fff;
   box-shadow: 0 3cqw 9cqw #d8662526;
-  transform: perspective(70rem) rotateX(5deg) rotateZ(-2deg);
+  transform: translateY(-14cqw) perspective(70rem) rotateX(5deg) rotateZ(-2deg);
   transform-origin: center top;
 }

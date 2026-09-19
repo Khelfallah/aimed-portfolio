@@ -6,15 +6,17 @@ type Project = {
   title: string;
   headline: string;
   description: string;
-  image: string | StaticImageData;
-  alt: string;
+  image?: string | StaticImageData;
+  alt?: string;
   href?: string;
   className?: string;
+  status?: string;
 };
 
 const projects: Project[] = [
   {
     title: 'Edriso',
+    status: 'Shipped',
     href: '/work/edriso',
     headline: 'A clearer path to exam preparation',
     description: 'Helping Algerian students find, evaluate, and practice with relevant exams.',
@@ -23,28 +25,40 @@ const projects: Project[] = [
     className: styles.edriso,
   },
   {
-    title: 'Project 02',
-    headline: 'Brand Identity',
+    title: 'Sekoir Marketplace',
+    status: 'Discontinued',
+    className: styles.brand,
+    headline: 'Buy and sell locally',
     description: 'An exploration of visual identity through form, color, and composition.',
-    image: '/work/project-02.png',
-    alt: 'Red editorial still life of abstract brand identity materials',
   },
   {
-    title: 'Project 03',
-    headline: 'Creative Direction',
-    description: 'An exploration of materials, light, and composition.',
-    image: '/work/project-03.png',
-    alt: 'Dark art-directed studio scene with chrome, translucent fabric, and stone',
+    title: 'Sekoir 2.0',
+    status: 'Discontinued',
+    headline: 'P2P Crypto Marketplace',
+    description: 'Reaching 40k monthly active users.',
+  },
+  {
+    title: 'Sekoir 1.0',
+    status: 'Discontinued',
+    headline: 'Crypto Classifieds',
+    description: 'Reducing scams to 0.3% of transactions.',
+  },
+  {
+    title: 'Khelfallah Consulting',
+    status: 'Shipped',
+    headline: 'World Class Consulting Agency',
+    description: 'Building trust and increasing client acquisition.',
   },
 ];
 
-export function WorkSection() {
+export function WorkSection({ showTitle = false }: { showTitle?: boolean }) {
   return (
       <section
         id="selected-work"
         className="work-section"
         aria-label="Selected work"
       >
+        {showTitle && <h2 className="landing-section-title">Selected work</h2>}
         <div className="project-list">
           {projects.map((project, index) => {
             const content = <>
@@ -53,14 +67,27 @@ export function WorkSection() {
                 <h2>{project.headline}</h2>
                 <p className="project-description">{project.description}</p>
               </div>
-              <div className="project-image">
+              {project.image && <div className="project-image">
                 <Image
                   src={project.image}
-                  alt={project.alt}
+                  alt={project.alt ?? ''}
                   fill
                   sizes="(max-width: 700px) 80vw, (max-width: 1100px) 40vw, 25vw"
                   priority={index === 0}
                 />
+              </div>}
+              <div className={styles.tags}>
+                {!project.href && (
+                  <span className={styles.statusTag}>Case study coming soon</span>
+                )}
+                {project.status && (
+                  <span className={styles.statusTag}>
+                    {project.status}
+                    <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                      <path d="M3 13 13 3M3 3h10v10" />
+                    </svg>
+                  </span>
+                )}
               </div>
             </>;
 

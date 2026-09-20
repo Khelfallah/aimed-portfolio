@@ -1928,9 +1928,14 @@ a:focus-visible {
   }
 
   .hero h1 {
-    font-size: clamp(3.35rem, 15vw, 5rem);
+    width: 100%;
+    font-size: clamp(1.9rem, 9.8vw, 4.25rem);
     letter-spacing: -0.073em;
     line-height: 0.91;
+  }
+
+  .hero h1 span {
+    white-space: nowrap;
   }
 
   .disciplines {

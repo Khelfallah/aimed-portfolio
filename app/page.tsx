@@ -31,7 +31,7 @@ export default function Home() {
 
         <div className="hero-visual" aria-hidden="true">
           <Image
-            src="/hero-portrait-hover.png"
+            src="/optimized/v1/hero-portrait-hover.webp"
             alt=""
             width={1027}
             height={1532}

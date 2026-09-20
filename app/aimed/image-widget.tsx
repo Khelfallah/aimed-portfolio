@@ -2,30 +2,31 @@
 
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
+import { preparePhoto, usePhotoPreload } from './photo-preload';
 
 const photos = [
   {
-    src: '/about-photos/cat-in-the-sun.jpg',
+    src: '/optimized/v1/about-photos/cat-in-the-sun.webp',
     alt: 'A white cat resting in the sun beside tall grass',
     position: '50% 61%',
   },
   {
-    src: '/about-photos/ancient-ruins.jpg',
+    src: '/optimized/v1/about-photos/ancient-ruins.webp',
     alt: 'Ancient ruins, trees and distant Algerian hills under a blue sky',
     position: '50% 58%',
   },
   {
-    src: '/about-photos/roman-theatre.jpg',
+    src: '/optimized/v1/about-photos/roman-theatre.webp',
     alt: 'A stone Roman theatre surrounded by mountains',
     position: '50% 58%',
   },
   {
-    src: '/about-photos/sunset-coast.jpg',
+    src: '/optimized/v1/about-photos/sunset-coast.webp',
     alt: 'Sunset over a quiet Algerian beach and mountain coastline',
     position: '50% 54%',
   },
   {
-    src: '/about-photos/shoreline.jpg',
+    src: '/optimized/v1/about-photos/shoreline.webp',
     alt: 'Waves meeting a golden beach beneath a clear blue sky',
     position: '50% 57%',
   },
@@ -51,12 +52,7 @@ export function ImageWidget() {
   const busy = useRef(false);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const photo = photos[activeIndex];
-
-  useEffect(() => {
-    // Warm only the next photo, keeping the initial download small.
-    const next = new window.Image();
-    next.src = photos[(activeIndex + 1) % photos.length].src;
-  }, [activeIndex]);
+  const preloadRef = usePhotoPreload(photos, activeIndex);
 
   useEffect(() => () => {
     if (timer.current) clearTimeout(timer.current);
@@ -66,10 +62,8 @@ export function ImageWidget() {
     if (busy.current) return;
     busy.current = true;
     const nextIndex = (activeIndex + 1) % photos.length;
-    const next = new window.Image();
-    next.src = photos[nextIndex].src;
     try {
-      await next.decode();
+      await preparePhoto(photos[nextIndex].src);
       setPreviousIndex(activeIndex);
       setActiveIndex(nextIndex);
       timer.current = setTimeout(() => {
@@ -82,7 +76,7 @@ export function ImageWidget() {
   }
 
   return (
-    <article className="about-panel inspiration-panel">
+    <article ref={preloadRef} className="about-panel inspiration-panel">
       <button
         className="image-widget-button"
         type="button"

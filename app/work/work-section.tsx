@@ -20,7 +20,7 @@ const projects: Project[] = [
     href: '/work/edriso',
     headline: 'A clearer path to exam preparation',
     description: 'Helping Algerian students find, evaluate, and practice with relevant exams.',
-    image: '/work/edriso-homepage.png',
+    image: '/optimized/v1/work/edriso-homepage.webp',
     alt: 'Edriso homepage with school navigation and an exam platform for Algerian students, built by experienced teachers',
     className: styles.edriso,
   },

@@ -103,7 +103,7 @@ export function AboutSection() {
           <article className="contact-card" aria-labelledby="contact-card-name">
             <div className="contact-card-avatar">
               <Image
-                src="/hero-portrait-hover.png"
+                src="/optimized/v1/hero-portrait-hover.webp"
                 alt="Portrait of Aimed Eddine Khelfallah"
                 width={320}
                 height={320}

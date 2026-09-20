@@ -1,7 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import { preparePhoto, usePhotoPreload } from './photo-preload';
 
 const egyptPhotos = [
   'Standing beside a pyramid in Egypt',
@@ -32,21 +33,38 @@ const spainPhotos = [
 ];
 
 const photos = [
-  ...egyptPhotos.map((alt, index) => ({ alt, country: 'Egypt', src: `/travel/egypt-${index + 1}.png` })),
-  ...turkeyPhotos.map((alt, index) => ({ alt, country: 'Turkey', src: `/travel/turkey-${index + 1}.png` })),
-  ...spainPhotos.map((alt, index) => ({ alt, country: 'Spain', src: `/travel/spain-${index + 1}.png` })),
+  ...egyptPhotos.map((alt, index) => ({ alt, country: 'Egypt', src: `/optimized/v1/travel/egypt-${index + 1}.webp` })),
+  ...turkeyPhotos.map((alt, index) => ({ alt, country: 'Turkey', src: `/optimized/v1/travel/turkey-${index + 1}.webp` })),
+  ...spainPhotos.map((alt, index) => ({ alt, country: 'Spain', src: `/optimized/v1/travel/spain-${index + 1}.webp` })),
 ];
 
 export function TravelCard() {
   const [active, setActive] = useState(0);
   const photo = photos[active];
+  const busy = useRef(false);
+  const preloadRef = usePhotoPreload(photos, active);
+
+  async function showNextPhoto() {
+    if (busy.current) return;
+    busy.current = true;
+    try {
+      const next = (active + 1) % photos.length;
+      await preparePhoto(photos[next].src);
+      setActive(next);
+    } catch {
+      // Preserve the current image if the next download fails.
+    } finally {
+      busy.current = false;
+    }
+  }
 
   return (
-    <article className="about-panel travel-card" aria-labelledby="travel-card-title">
+    <article ref={preloadRef} className="about-panel travel-card" aria-labelledby="travel-card-title">
       <Image
         src={photo.src}
         alt={photo.alt}
         fill
+        unoptimized
         sizes="(max-width: 700px) 100vw, 50vw"
         className="travel-card-image"
       />
@@ -54,7 +72,7 @@ export function TravelCard() {
         type="button"
         className="travel-card-next"
         aria-label="Show next travel photo"
-        onClick={() => setActive((current) => (current + 1) % photos.length)}
+        onClick={showNextPhoto}
       />
       <div className="travel-card-caption">
         <div>

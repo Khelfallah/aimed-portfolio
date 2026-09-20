@@ -1884,31 +1884,42 @@ a:focus-visible {
 @media (max-width: 700px) {
   .hero {
     min-height: max(45rem, 100svh);
+    isolation: auto;
+  }
+
+  main:has(.nav-pill) {
+    padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
   }
 
   .nav-pill {
-    top: 0.75rem;
-    width: calc(100% - 1rem);
-    gap: 0.2rem;
+    position: fixed;
+    z-index: 100;
+    top: auto;
+    bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr) minmax(0, 0.8fr) minmax(0, 1.05fr) minmax(0, 1.5fr);
+    width: min(30rem, calc(100% - 1rem - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px)));
+    gap: 0.15rem;
     padding: 0.3rem;
-    font-size: 0.95rem;
+    font-size: 0.875rem;
   }
 
   .nav-pill :is(a, button) {
+    min-width: 0;
     min-height: 3.25rem;
-    padding: 0 0.5rem;
-  }
-
-  .nav-linkedin {
-    display: none;
+    padding: 0 0.125rem;
   }
 
   .greeting-window {
-    width: 5.75rem;
+    width: 100%;
   }
 
   .nav-contact {
     margin-left: 0;
+  }
+
+  .nav-work {
+    gap: 0.125rem;
   }
 
   .hero-copy {
@@ -2065,15 +2076,7 @@ a:focus-visible {
 
 @media (max-width: 380px) {
   .nav-pill {
-    font-size: 0.82rem;
-  }
-
-  .nav-pill :is(a, button) {
-    padding: 0 0.25rem;
-  }
-
-  .greeting-window {
-    width: 5rem;
+    font-size: 0.8125rem;
   }
 }
 

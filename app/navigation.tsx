@@ -23,6 +23,7 @@ export function Navigation({ active }: NavigationProps) {
         aria-label="Hello in multiple languages, home"
         aria-current={active === 'home' ? 'page' : undefined}
       >
+        <span className="mobile-greeting" aria-hidden="true">👋</span>
         <span className="greeting-window" aria-hidden="true">
           {greetings.map((greeting) => (
             <span key={greeting.lang} lang={greeting.lang} dir={greeting.dir}>

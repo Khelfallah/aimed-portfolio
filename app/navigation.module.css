@@ -1,0 +1,6 @@
+@media (max-width: 700px) {
+  .mobileNav.mobileNav :global(a),
+  .mobileNav.mobileNav :global(button) {
+    border-radius: 1.35rem;
+  }
+}

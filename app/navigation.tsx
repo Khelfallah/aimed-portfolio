@@ -1,3 +1,5 @@
+import styles from './navigation.module.css';
+
 // Native links intentionally force full navigation in the hosted build.
 /* oxlint-disable next/no-html-link-for-pages */
 
@@ -16,7 +18,7 @@ type NavigationProps = {
 
 export function Navigation({ active }: NavigationProps) {
   return (
-    <nav className="nav-pill" aria-label="Primary navigation">
+    <nav className={`nav-pill ${styles.mobileNav}`} aria-label="Primary navigation">
       <a
         className={`nav-greeting${active === 'home' ? ' is-active' : ''}`}
         href="/"

@@ -1953,7 +1953,7 @@ a:focus-visible {
 
   .hero-copy {
     width: calc(100% - 1.5rem);
-    padding-top: calc(clamp(4.5rem, 11vh, 6.5rem) + env(safe-area-inset-top, 0px));
+    padding-top: clamp(9.5rem, 22vh, 12rem);
   }
 
   .hero h1 {
@@ -2160,12 +2160,6 @@ a:focus-visible {
 
 main:is(.about-page, .work-page, .contact-page) {
   padding-top: calc(clamp(7rem, 8vw, 8.25rem) + 1.5rem);
-}
-
-@media (max-width: 700px) {
-  main:is(.about-page, .work-page, .contact-page) {
-    padding-top: calc(2rem + env(safe-area-inset-top, 0px));
-  }
 }
 
 .work-page .project {

@@ -1,8 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
-import { preparePhoto, usePhotoPreload } from './photo-preload';
+import { usePhotoCarousel } from './use-photo-carousel';
 
 const photos = [
   {
@@ -47,60 +46,36 @@ const photos = [
 ] as const;
 
 export function ImageWidget() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [previousIndex, setPreviousIndex] = useState<number | null>(null);
-  const busy = useRef(false);
-  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const photo = photos[activeIndex];
-  const preloadRef = usePhotoPreload(photos, activeIndex);
-
-  useEffect(() => () => {
-    if (timer.current) clearTimeout(timer.current);
-  }, []);
-
-  async function showNextPhoto() {
-    if (busy.current) return;
-    busy.current = true;
-    const nextIndex = (activeIndex + 1) % photos.length;
-    try {
-      await preparePhoto(photos[nextIndex].src);
-      setPreviousIndex(activeIndex);
-      setActiveIndex(nextIndex);
-      timer.current = setTimeout(() => {
-        setPreviousIndex(null);
-        busy.current = false;
-      }, 550);
-    } catch {
-      busy.current = false;
-    }
-  }
+  const { active, previous, preloadRef, showNext } = usePhotoCarousel(photos);
+  const photo = photos[active];
 
   return (
     <article ref={preloadRef} className="about-panel inspiration-panel">
       <button
         className="image-widget-button"
         type="button"
-        onClick={showNextPhoto}
-        aria-label={`Show next photo. Photo ${activeIndex + 1} of ${photos.length}: ${photo.alt}`}
+        onClick={showNext}
+        aria-label={`Show next photo. Photo ${active + 1} of ${photos.length}: ${photo.alt}`}
       >
-        {previousIndex !== null && (
+        {previous !== null && (
           <Image
             className="image-widget-photo image-widget-previous"
-            src={photos[previousIndex].src}
+            src={photos[previous].src}
             alt=""
             aria-hidden="true"
             fill
             unoptimized
-            style={{ objectPosition: photos[previousIndex].position }}
+            style={{ objectPosition: photos[previous].position }}
           />
         )}
         <Image
           key={photo.src}
-          className={`image-widget-photo${previousIndex !== null ? " image-widget-entering" : ""}`}
+          className={`image-widget-photo${previous !== null ? ' image-widget-entering' : ''}`}
           src={photo.src}
           alt={photo.alt}
           fill
           unoptimized
+          loading={active === 0 && previous === null ? 'lazy' : 'eager'}
           sizes="(max-width: 760px) calc(100vw - 1.3rem), (max-width: 1100px) 48vw, 24vw"
           style={{ objectPosition: photo.position }}
         />

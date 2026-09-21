@@ -29,34 +29,26 @@ export function usePhotoPreload(photos: readonly { src: string }[], active: numb
   useEffect(() => {
     if (!ref.current) return;
     if (!('IntersectionObserver' in window)) {
-      setNearby(true);
-      return;
+      const timeout = setTimeout(() => setNearby(true), 0);
+      return () => clearTimeout(timeout);
     }
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setNearby(true);
         observer.disconnect();
       }
-    }, { rootMargin: '200px' });
+    }, { rootMargin: '400px' });
     observer.observe(ref.current);
     return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
     if (!nearby) return;
-    let cancelled = false;
-    async function warmUpcomingPhotos() {
-      for (let offset = 1; offset <= Math.min(2, photos.length - 1); offset++) {
-        if (cancelled) return;
-        try {
-          await preparePhoto(photos[(active + offset) % photos.length].src, 'low');
-        } catch {
-          // A click can retry a failed speculative download.
-        }
-      }
-    }
-    void warmUpcomingPhotos();
-    return () => { cancelled = true; };
+    const upcoming = [1, 2]
+      .filter((offset) => offset < photos.length)
+      .map((offset) => preparePhoto(photos[(active + offset) % photos.length].src, 'low'));
+    // Start both downloads together so the second tap is ready too.
+    void Promise.allSettled(upcoming);
   }, [active, nearby, photos]);
 
   return ref;

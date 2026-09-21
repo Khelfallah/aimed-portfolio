@@ -1,8 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useRef, useState } from 'react';
-import { preparePhoto, usePhotoPreload } from './photo-preload';
+import { usePhotoCarousel } from './use-photo-carousel';
 
 const egyptPhotos = [
   'Standing beside a pyramid in Egypt',
@@ -39,40 +38,36 @@ const photos = [
 ];
 
 export function TravelCard() {
-  const [active, setActive] = useState(0);
+  const { active, previous, preloadRef, showNext } = usePhotoCarousel(photos);
   const photo = photos[active];
-  const busy = useRef(false);
-  const preloadRef = usePhotoPreload(photos, active);
-
-  async function showNextPhoto() {
-    if (busy.current) return;
-    busy.current = true;
-    try {
-      const next = (active + 1) % photos.length;
-      await preparePhoto(photos[next].src);
-      setActive(next);
-    } catch {
-      // Preserve the current image if the next download fails.
-    } finally {
-      busy.current = false;
-    }
-  }
 
   return (
     <article ref={preloadRef} className="about-panel travel-card" aria-labelledby="travel-card-title">
+      {previous !== null && (
+        <Image
+          className="travel-card-image travel-card-previous"
+          src={photos[previous].src}
+          alt=""
+          aria-hidden="true"
+          fill
+          unoptimized
+        />
+      )}
       <Image
+        key={photo.src}
         src={photo.src}
         alt={photo.alt}
         fill
         unoptimized
+        loading={active === 0 && previous === null ? 'lazy' : 'eager'}
         sizes="(max-width: 700px) 100vw, 50vw"
-        className="travel-card-image"
+        className={`travel-card-image${previous !== null ? ' travel-card-entering' : ''}`}
       />
       <button
         type="button"
         className="travel-card-next"
         aria-label="Show next travel photo"
-        onClick={showNextPhoto}
+        onClick={showNext}
       />
       <div className="travel-card-caption">
         <div>

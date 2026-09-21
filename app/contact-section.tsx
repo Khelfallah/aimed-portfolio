@@ -9,6 +9,7 @@ export function ContactSection({ entering = false }: { entering?: boolean }) {
       {!entering && <ContactEntrance />}
       <h2 id="contact-title" className="contact-section-title landing-section-title">Get in touch</h2>
       <div className="contact-shell">
+        <ContactForm />
         <div className="contact-left-stack">
           <div className="contact-intro">
             <div className="sleep-card">
@@ -52,7 +53,6 @@ export function ContactSection({ entering = false }: { entering?: boolean }) {
             </div>
           </div>
         </div>
-        <ContactForm />
       </div>
       <small>
         © 2026 Aimed Eddine Khelfallah<br />

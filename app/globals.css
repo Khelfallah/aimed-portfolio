@@ -183,6 +183,10 @@ a:focus-visible {
   overflow: hidden;
 }
 
+.mobile-greeting {
+  display: none;
+}
+
 .greeting-window > span {
   position: absolute;
   inset: 0;
@@ -1872,12 +1876,12 @@ a:focus-visible {
     width: 100%;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-column: auto;
-    grid-row: auto;
+    grid-row: 1;
   }
 
   .contact-form {
     grid-column: auto;
-    grid-row: auto;
+    grid-row: 2;
   }
 }
 
@@ -1885,6 +1889,11 @@ a:focus-visible {
   .hero {
     min-height: max(45rem, 100svh);
     isolation: auto;
+  }
+
+  .landing-page > .hero::after {
+    z-index: 2;
+    height: clamp(18rem, 42svh, 24rem);
   }
 
   main:has(.nav-pill) {
@@ -1908,35 +1917,23 @@ a:focus-visible {
     min-width: 0;
     min-height: 3.25rem;
     padding: 0 0.125rem;
-    border-radius: 0.95rem;
-    transition:
-      transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
-      background-color 260ms ease,
-      box-shadow 260ms ease;
-  }
-
-  .nav-pill a.is-active,
-  .nav-pill a[aria-current='page'] {
-    background-color: rgba(235, 236, 233, 0.88);
-    box-shadow:
-      inset 0 0 0 1px rgba(31, 39, 51, 0.045),
-      0 3px 10px rgba(31, 39, 51, 0.055);
-  }
-
-  .nav-pill a:focus-visible {
-    outline: 0;
-    box-shadow:
-      inset 0 0 0 1px rgba(31, 39, 51, 0.08),
-      0 0 0 2px rgba(31, 39, 51, 0.1);
-  }
-
-  .nav-pill a:active {
-    transform: scale(0.97);
   }
 
   .greeting-window {
-    display: block;
-    width: 100%;
+    display: none;
+  }
+
+  .mobile-greeting {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.125rem;
+    font-size: inherit;
+    line-height: 1;
+  }
+
+  .mobile-greeting-emoji {
+    font-size: 1.05rem;
+    line-height: 1;
   }
 
   .nav-contact {
@@ -1953,7 +1950,7 @@ a:focus-visible {
 
   .hero-copy {
     width: calc(100% - 1.5rem);
-    padding-top: clamp(9.5rem, 22vh, 12rem);
+    padding-top: calc(clamp(7.5rem, 17vh, 9.5rem) + env(safe-area-inset-top, 0px));
   }
 
   .hero h1 {
@@ -1980,6 +1977,8 @@ a:focus-visible {
 
   .hero-visual {
     width: min(29rem, 100vw);
+    -webkit-mask-image: linear-gradient(to bottom, #000 52%, rgba(0, 0, 0, 0.9) 62%, transparent 96%);
+    mask-image: linear-gradient(to bottom, #000 52%, rgba(0, 0, 0, 0.9) 62%, transparent 96%);
   }
 
   .work-section {
@@ -2007,13 +2006,13 @@ a:focus-visible {
     grid-template-columns: minmax(0, 1fr);
     justify-self: stretch;
     grid-column: auto;
-    grid-row: auto;
+    grid-row: 2;
   }
 
   .contact-form {
     width: 100%;
     grid-column: auto;
-    grid-row: auto;
+    grid-row: 1;
   }
 
   .contact-intro,
@@ -2108,14 +2107,6 @@ a:focus-visible {
   }
 }
 
-@media (max-width: 700px) and (hover: hover) and (pointer: fine) {
-  .nav-pill a:hover {
-    transform: translateY(-1px);
-    background-color: rgba(239, 240, 237, 0.94);
-    box-shadow: 0 4px 12px rgba(31, 39, 51, 0.07);
-  }
-}
-
 @media (max-width: 380px) {
   .nav-pill {
     font-size: 0.6875rem;
@@ -2160,6 +2151,12 @@ a:focus-visible {
 
 main:is(.about-page, .work-page, .contact-page) {
   padding-top: calc(clamp(7rem, 8vw, 8.25rem) + 1.5rem);
+}
+
+@media (max-width: 700px) {
+  main:is(.about-page, .work-page, .contact-page) {
+    padding-top: calc(clamp(5rem, 10vh, 6rem) + env(safe-area-inset-top, 0px));
+  }
 }
 
 .work-page .project {

@@ -1,6 +1,23 @@
 @media (max-width: 700px) {
+  .mobileNav.mobileNav {
+    --mobile-menu-radius: 1.35rem;
+    --mobile-menu-inset: 0.2rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding: var(--mobile-menu-inset);
+    border-radius: calc(var(--mobile-menu-radius) + var(--mobile-menu-inset) + 1px);
+  }
+
   .mobileNav.mobileNav :global(a),
   .mobileNav.mobileNav :global(button) {
-    border-radius: 1.35rem;
+    padding-inline: 0.25rem;
+    border-radius: var(--mobile-menu-radius);
+    transition: background-color 220ms ease, box-shadow 220ms ease;
+  }
+
+  .mobileNav.mobileNav :global(a:hover),
+  .mobileNav.mobileNav :global(a.is-active),
+  .mobileNav.mobileNav :global(a[aria-current='page']) {
+    background-color: rgba(235, 236, 233, 0.88);
+    box-shadow: 0 3px 10px rgba(31, 39, 51, 0.055);
   }
 }

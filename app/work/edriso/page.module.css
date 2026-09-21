@@ -211,8 +211,8 @@
   }
 
   .header {
-    padding: 9rem 1.25rem 4rem;
-    justify-content: center;
+    padding: calc(clamp(7.5rem, 15vh, 9rem) + env(safe-area-inset-top, 0px)) 1.25rem 4rem;
+    justify-content: flex-start;
   }
 
   .title {

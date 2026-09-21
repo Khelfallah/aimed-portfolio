@@ -183,10 +183,6 @@ a:focus-visible {
   overflow: hidden;
 }
 
-.mobile-greeting {
-  display: none;
-}
-
 .greeting-window > span {
   position: absolute;
   inset: 0;
@@ -1915,20 +1911,8 @@ a:focus-visible {
   }
 
   .greeting-window {
-    display: none;
-  }
-
-  .mobile-greeting {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.125rem;
-    font-size: inherit;
-    line-height: 1;
-  }
-
-  .mobile-greeting-emoji {
-    font-size: 1.05rem;
-    line-height: 1;
+    display: block;
+    width: 100%;
   }
 
   .nav-contact {

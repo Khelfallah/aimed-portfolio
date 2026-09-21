@@ -1901,7 +1901,7 @@ a:focus-visible {
     width: min(30rem, calc(100% - 1rem - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px)));
     gap: 0.05rem;
     padding: 0.2rem;
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
   }
 
   .nav-pill :is(a, button) {
@@ -2086,7 +2086,7 @@ a:focus-visible {
 
 @media (max-width: 380px) {
   .nav-pill {
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
   }
 }
 

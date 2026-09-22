@@ -41,15 +41,15 @@ export function ContactSection({ entering = false }: { entering?: boolean }) {
               <a className="social-tile" href="https://www.linkedin.com/in/aimed/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
                 <Image src="/social-icons/linkedin.png" alt="" width={1022} height={1023} sizes="(max-width: 1100px) 30vw, 160px" />
               </a>
-              <span className="social-tile">
-                <Image src="/social-icons/behance.png" alt="Behance" width={1021} height={1021} sizes="(max-width: 1100px) 30vw, 160px" />
-              </span>
+              <a className="social-tile" href="https://www.behance.net/khalfellah" target="_blank" rel="noreferrer" aria-label="Behance">
+                <Image src="/social-icons/behance.png" alt="" width={1021} height={1021} sizes="(max-width: 1100px) 30vw, 160px" />
+              </a>
               <span className="social-tile">
                 <Image src="/social-icons/facebook.png" alt="Facebook" width={1017} height={1026} sizes="(max-width: 1100px) 30vw, 160px" />
               </span>
-              <span className="social-tile">
-                <Image src="/social-icons/instagram.png" alt="Instagram" width={1031} height={1021} sizes="(max-width: 1100px) 30vw, 160px" />
-              </span>
+              <a className="social-tile" href="https://www.instagram.com/aimed.visuals" target="_blank" rel="noreferrer" aria-label="Instagram">
+                <Image src="/social-icons/instagram.png" alt="" width={1031} height={1021} sizes="(max-width: 1100px) 30vw, 160px" />
+              </a>
             </div>
           </div>
         </div>

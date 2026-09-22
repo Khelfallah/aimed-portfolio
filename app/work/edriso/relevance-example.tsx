@@ -23,12 +23,13 @@ export function RelevanceExample() {
       </div>
       <div id={`${id}-screen`} className={styles.relevanceScreenFrame}>
         <Image
-          src={showIndicators ? '/work/edriso/physics-exam-indicators.png' : '/work/edriso/physics-exam-library.png'}
+          src={showIndicators ? '/optimized/v2/work/edriso/physics-exam-indicators.webp' : '/optimized/v2/work/edriso/physics-exam-library.webp'}
           alt={showIndicators
             ? 'Annotated Edriso Physics exam library with orange callouts identifying semester, year, difficulty, views, and downloads.'
             : 'Edriso 3AS Physics exam library with year, semester, and difficulty filters, and exam cards displaying views, downloads, and View buttons.'}
           width={showIndicators ? 1331 : 1476}
           height={showIndicators ? 1181 : 1310}
+          unoptimized
           sizes="(max-width: 900px) 90vw, 832px"
         />
       </div>

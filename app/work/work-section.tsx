@@ -74,6 +74,7 @@ export function WorkSection({ showTitle = false }: { showTitle?: boolean }) {
                   fill
                   sizes="(max-width: 700px) 80vw, (max-width: 1100px) 40vw, 25vw"
                   priority={index === 0}
+                  unoptimized
                 />
               </div>}
               <div className={styles.tags}>

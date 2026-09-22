@@ -32,9 +32,9 @@ const spainPhotos = [
 ];
 
 const photos = [
-  ...egyptPhotos.map((alt, index) => ({ alt, country: 'Egypt', src: `/optimized/v1/travel/egypt-${index + 1}.webp` })),
-  ...turkeyPhotos.map((alt, index) => ({ alt, country: 'Turkey', src: `/optimized/v1/travel/turkey-${index + 1}.webp` })),
-  ...spainPhotos.map((alt, index) => ({ alt, country: 'Spain', src: `/optimized/v1/travel/spain-${index + 1}.webp` })),
+  ...egyptPhotos.map((alt, index) => ({ alt, country: 'Egypt', src: `/optimized/v2/travel/egypt-${index + 1}.webp` })),
+  ...turkeyPhotos.map((alt, index) => ({ alt, country: 'Turkey', src: `/optimized/v2/travel/turkey-${index + 1}.webp` })),
+  ...spainPhotos.map((alt, index) => ({ alt, country: 'Spain', src: `/optimized/v2/travel/spain-${index + 1}.webp` })),
 ];
 
 export function TravelCard() {

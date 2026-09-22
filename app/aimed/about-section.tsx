@@ -107,6 +107,7 @@ export function AboutSection() {
                 alt="Portrait of Aimed Eddine Khelfallah"
                 width={320}
                 height={320}
+                unoptimized
                 sizes="(max-width: 700px) 160px, 220px"
               />
             </div>
@@ -161,9 +162,10 @@ export function AboutSection() {
           <article className="about-panel practice-panel resume-panel">
             <div className="practice-image">
               <Image
-                src="/resume-card-transparent.png"
+                src="/optimized/v2/resume-card-transparent.webp"
                 alt="Résumé document illustration"
                 fill
+                unoptimized
                 sizes="180px"
               />
             </div>

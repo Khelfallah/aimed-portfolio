@@ -72,7 +72,7 @@ function Block({ block }: { block: CopyBlock }) {
     case 'image':
       return (
         <figure className={`${styles.caseStudyImage}${block.size === 'small' ? ` ${styles.smallCaseStudyImage}` : ''}`}>
-          <Image src={block.src} alt={block.alt} width={block.width ?? 1713} height={block.height ?? 918} sizes={block.size === 'small' ? '(max-width: 360px) 90vw, 320px' : '(max-width: 900px) 100vw, 52rem'} />
+          <Image src={block.src} alt={block.alt} width={block.width ?? 1713} height={block.height ?? 918} unoptimized sizes={block.size === 'small' ? '(max-width: 360px) 90vw, 320px' : '(max-width: 900px) 100vw, 52rem'} />
         </figure>
       );
     case 'search-demand':

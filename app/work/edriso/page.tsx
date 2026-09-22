@@ -18,7 +18,7 @@ function EdrisoBrand({ priority = false }: { priority?: boolean }) {
       <div className={styles.logo}>
         <Image
           className={styles.logoReference}
-          src="/work/edriso-brand-reference.png"
+          src="/optimized/v2/work/edriso-brand-reference.webp"
           alt=""
           width={1462}
           height={786}
@@ -59,10 +59,11 @@ export default function EdrisoPage() {
           </h2>
           <figure className={styles.resourceCover}>
             <Image
-              src="/work/edriso-homepage.png"
+              src="/optimized/v2/work/edriso-homepage.webp"
               alt="Edriso homepage with school-level navigation, an introduction to the exam platform for Algerian students, and a Find an Exam button."
               width={2888}
               height={1468}
+              unoptimized
               sizes="(max-width: 700px) 94vw, (max-width: 1600px) 80vw, 1280px"
             />
           </figure>

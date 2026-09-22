@@ -746,7 +746,7 @@
         },
         {
           "type": "image",
-          "src": "/work/edriso/experienced-teachers.png",
+          "src": "/optimized/v2/work/edriso/experienced-teachers.webp",
           "alt": "Teacher profile card with a blue verification badge on an orange background.",
           "width": 4627,
           "height": 2454,
@@ -762,7 +762,7 @@
         },
         {
           "type": "image",
-          "src": "/work/edriso/resource-source.png",
+          "src": "/optimized/v2/work/edriso/resource-source.webp",
           "size": "small",
           "alt": "Edriso resource card identifying an Official School Exam, with semester, year, difficulty, views, and downloads.",
           "width": 1722,
@@ -778,7 +778,7 @@
         },
         {
           "type": "image",
-          "src": "/work/edriso/resource-clarity.png",
+          "src": "/optimized/v2/work/edriso/resource-clarity.webp",
           "alt": "Edriso mathematics exam page with an official school exam title and metadata for trimester, academic year, difficulty, and resource identifier above the PDF viewer.",
           "width": 4627,
           "height": 2454,
@@ -794,7 +794,7 @@
         },
         {
           "type": "image",
-          "src": "/work/edriso/crowdsourcing-upload.png",
+          "src": "/optimized/v2/work/edriso/crowdsourcing-upload.webp",
           "alt": "Edriso exam contribution interface with a PDF upload area and a notice that uploads are reviewed before publication.",
           "width": 4627,
           "height": 2454,
@@ -819,7 +819,7 @@
           },
           {
             "type": "image",
-            "src": "/work/edriso/curriculum-exam-structure.png",
+            "src": "/optimized/v2/work/edriso/curriculum-exam-structure.webp",
             "alt": "Annotated Arabic exam page with orange callouts highlighting the education year, exam title, subject and stream, exam duration, and section title.",
             "width": 1536,
             "height": 1024

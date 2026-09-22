@@ -39,16 +39,16 @@ export function ContactSection({ entering = false }: { entering?: boolean }) {
           <div className="social-card">
             <div className="social-card-links" aria-label="Social media">
               <a className="social-tile" href="https://www.linkedin.com/in/aimed/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                <Image src="/social-icons/linkedin.png" alt="" width={1022} height={1023} sizes="(max-width: 1100px) 30vw, 160px" />
+                <Image src="/optimized/v2/social-icons/linkedin.webp" alt="" width={1022} height={1023} sizes="(max-width: 1100px) 30vw, 160px" unoptimized />
               </a>
               <a className="social-tile" href="https://www.behance.net/khalfellah" target="_blank" rel="noreferrer" aria-label="Behance">
-                <Image src="/social-icons/behance.png" alt="" width={1021} height={1021} sizes="(max-width: 1100px) 30vw, 160px" />
+                <Image src="/optimized/v2/social-icons/behance.webp" alt="" width={1021} height={1021} sizes="(max-width: 1100px) 30vw, 160px" unoptimized />
               </a>
               <span className="social-tile">
-                <Image src="/social-icons/facebook.png" alt="Facebook" width={1017} height={1026} sizes="(max-width: 1100px) 30vw, 160px" />
+                <Image src="/optimized/v2/social-icons/facebook.webp" alt="Facebook" width={1017} height={1026} sizes="(max-width: 1100px) 30vw, 160px" unoptimized />
               </span>
               <a className="social-tile" href="https://www.instagram.com/aimed.visuals" target="_blank" rel="noreferrer" aria-label="Instagram">
-                <Image src="/social-icons/instagram.png" alt="" width={1031} height={1021} sizes="(max-width: 1100px) 30vw, 160px" />
+                <Image src="/optimized/v2/social-icons/instagram.webp" alt="" width={1031} height={1021} sizes="(max-width: 1100px) 30vw, 160px" unoptimized />
               </a>
             </div>
           </div>

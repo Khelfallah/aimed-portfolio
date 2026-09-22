@@ -6,9 +6,9 @@ import { FastForward, Pause, Play, Rewind } from 'lucide-react';
 import styles from './music-widget.module.css';
 
 const tracks = [
-  { title: 'Instrumeleon', artist: 'Cameleon', src: '/music/cameleon-instrumeleon.mp3', artwork: '/music/cameleon-cover.png' },
-  { title: 'El Adian', artist: 'Cameleon', src: '/music/cameleon-el-adian.mp3', artwork: '/music/cameleon-cover.png' },
-  { title: 'Tu Veneno', artist: 'J Balvin', src: '/music/j-balvin-tu-veneno.mp3', artwork: '/music/j-balvin-tu-veneno-cover.png' },
+  { title: 'Instrumeleon', artist: 'Cameleon', src: '/music/cameleon-instrumeleon.mp3', artwork: '/optimized/v2/music/cameleon-cover.webp' },
+  { title: 'El Adian', artist: 'Cameleon', src: '/music/cameleon-el-adian.mp3', artwork: '/optimized/v2/music/cameleon-cover.webp' },
+  { title: 'Tu Veneno', artist: 'J Balvin', src: '/music/j-balvin-tu-veneno.mp3', artwork: '/optimized/v2/music/j-balvin-tu-veneno-cover.webp' },
 ];
 
 function formatTime(seconds: number) {
@@ -185,7 +185,7 @@ export function MusicWidget() {
       <div className={styles.content}>
         <div className={styles.topRow}>
           <div ref={artworkRef} className={styles.artwork}>
-            <Image src={track.artwork} alt={`${track.artist} — ${track.title} artwork`} fill sizes="(max-width: 700px) 30vw, (max-width: 1100px) 15vw, 8vw" />
+            <Image src={track.artwork} alt={`${track.artist} — ${track.title} artwork`} fill unoptimized sizes="(max-width: 700px) 30vw, (max-width: 1100px) 15vw, 8vw" />
           </div>
           <div ref={visualizerRef} className={styles.visualizer} aria-hidden="true">
             {Array.from({ length: 6 }, (_, index) => <span key={index} />)}

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono, IBM_Plex_Sans_Arabic } from 'next/font/google';
+import { siteUrl, socialDescription, socialImage, socialImageUrl, socialTitle } from './social-metadata';
 import './globals.css';
 
 const geistSans = Geist({
@@ -20,24 +21,17 @@ const ibmArabic = IBM_Plex_Sans_Arabic({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://aimed-portfolio.vercel.app'),
-  title: 'Aimed — Creative Director & Designer',
-  description:
-    'Aimed designs brands, digital products, and experiences from Algeria.',
+  metadataBase: new URL(siteUrl),
+  title: socialTitle,
+  description: socialDescription,
   openGraph: {
     type: 'website',
-    images: [
-      {
-        url: '/link-preview.png',
-        width: 1228,
-        height: 658,
-        alt: 'Aimed designs brands, digital products and experiences.',
-      },
-    ],
+    siteName: 'Aimed',
+    images: [socialImage],
   },
   twitter: {
     card: 'summary_large_image',
-    images: ['/link-preview.png'],
+    images: [socialImageUrl],
   },
 };
 

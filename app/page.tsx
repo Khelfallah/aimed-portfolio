@@ -1,8 +1,29 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import { WorkSection } from './work/work-section';
 import { Navigation } from './navigation';
 import { AboutSection } from './aimed/about-section';
 import { ContactSection } from './contact-section';
+import { siteUrl, socialDescription, socialImage, socialImageUrl, socialTitle } from './social-metadata';
+
+export const metadata: Metadata = {
+  metadataBase: null,
+  alternates: { canonical: `${siteUrl}/` },
+  openGraph: {
+    title: socialTitle,
+    description: socialDescription,
+    url: `${siteUrl}/`,
+    type: 'website',
+    siteName: 'Aimed',
+    images: [socialImage],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: socialTitle,
+    description: socialDescription,
+    images: [socialImageUrl],
+  },
+};
 
 const portfolio = {
   name: 'Aimed',
